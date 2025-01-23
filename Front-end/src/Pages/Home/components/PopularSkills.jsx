@@ -21,7 +21,7 @@ const PopularSkills = () => {
     
       <Swiper
         slidesPerView={4}
-        spaceBetween={30}
+        spaceBetween={35}
         freeMode={true}
        
         loop={true}
@@ -32,40 +32,26 @@ const PopularSkills = () => {
         className="mySwiper"
       >
         <SwiperSlide>
-        <p className='w-[280px] font-Inter bg-greybg border-2 font-bold text-[24px] text-greycolor h-[30vh] flex items-center justify-center'>Programming & Tech</p>
+        <p className='w-[270px] font-Inter bg-greybg border-2 font-bold text-[22px] text-greycolor h-[30vh] flex items-center justify-center'>Programming & Tech</p>
         </SwiperSlide>
 
-        <SwiperSlide>
-        <p className='w-[280px] font-Inter bg-greybg border-2 font-bold text-[24px] text-greycolor h-[30vh] flex items-center justify-center'>Programming & Tech</p>
+       <SwiperSlide>
+        <p className='w-[270px] font-Inter bg-greybg border-2 font-bold text-[22px] text-greycolor h-[30vh] flex items-center justify-center'>Programming & Tech</p>
         </SwiperSlide>
 
-        <SwiperSlide>
-        <p className='w-[280px] font-Inter bg-greybg border-2 font-bold text-[24px] text-greycolor h-[30vh] flex items-center justify-center'>Programming & Tech</p>
+       <SwiperSlide>
+        <p className='w-[270px] font-Inter bg-greybg border-2 font-bold text-[22px] text-greycolor h-[30vh] flex items-center justify-center'>Programming & Tech</p>
         </SwiperSlide>
 
-        <SwiperSlide>
-        <p className='w-[280px] font-Inter bg-greybg border-2 font-bold text-[24px] text-greycolor h-[30vh] flex items-center justify-center'>Programming & Tech</p>
+       <SwiperSlide>
+        <p className='w-[270px] font-Inter bg-greybg border-2 font-bold text-[22px] text-greycolor h-[30vh] flex items-center justify-center'>Programming & Tech</p>
         </SwiperSlide>
 
-        <SwiperSlide>
-        <p className='w-[280px] font-Inter bg-greybg border-2 font-bold text-[24px] text-greycolor h-[30vh] flex items-center justify-center'>Programming & Tech</p>
+       <SwiperSlide>
+        <p className='w-[270px] font-Inter bg-greybg border-2 font-bold text-[22px] text-greycolor h-[30vh] flex items-center justify-center'>Programming & Tech</p>
         </SwiperSlide>
 
-        <SwiperSlide>
-        <p className='w-[280px] font-Inter bg-greybg border-2 font-bold text-[24px] text-greycolor h-[30vh] flex items-center justify-center'>Programming & Tech</p>
-        </SwiperSlide>
-
-        <SwiperSlide>
-        <p className='w-[280px] font-Inter bg-greybg border-2 font-bold text-[24px] text-greycolor h-[30vh] flex items-center justify-center'>Programming & Tech</p>
-        </SwiperSlide>
-
-        <SwiperSlide>
-        <p className='w-[280px] font-Inter bg-greybg border-2 font-bold text-[24px] text-greycolor h-[30vh] flex items-center justify-center'>Programming & Tech</p>
-        </SwiperSlide>
-
-        <SwiperSlide>
-        <p className='w-[280px] font-Inter bg-greybg border-2 font-bold text-[24px] text-greycolor h-[30vh] flex items-center justify-center'>Programming & Tech</p>
-        </SwiperSlide>
+       
     
       </Swiper>
   

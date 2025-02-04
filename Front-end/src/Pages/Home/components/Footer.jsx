@@ -2,13 +2,11 @@ import { FaFacebook } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
 import { LuCopyright } from "react-icons/lu";
 import { FaXTwitter } from "react-icons/fa6";
-import {categories, about, support, resources} from "../../../data/FooterData.js"
-import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
     <>
-    <footer className="w-[100%] bg-bluecolor pb-[180px] relative z-10 overflow-hidden ">
+    <footer className="w-[100%] bg-bluecolor pb-[180px] overflow-hidden ">
       <div className="w-[85%] mx-auto flex justify-between relative top-10 gap-5 ">
         <div className="relative top-[100px] w-[30%]">
           <h1 className="font-Inter text-white text-[30px] pb-5 font-bold">Linkprosoft.</h1>
@@ -16,8 +14,8 @@ const Footer = () => {
 
         <div className="flex gap-3 ">
            <FaLinkedin className="   text-white text-[25px]" />
-           <FaXTwitter className="   text-white text-[25px]"/>
-            <FaFacebook className="    text-[25px]"/>
+          <FaXTwitter className="   text-white text-[25px]"/>
+          <FaFacebook className="    text-[25px]"/>
         </div>
         </div>
 
@@ -26,36 +24,49 @@ const Footer = () => {
           <div>
             <h1 className="font-semibold text-white list-disc font-Inter text-[13px]">Categories</h1>
             <ul className="font-semibold text-white pl-8 list-disc font-Inter text-[12px]">
-              {categories.map((category, index) => (
-                <li key={index}><Link>{category}</Link></li>
-              ))}
+              <li><a href="">Graphic & Design</a></li>
+              <li><a href="">Digital Marketing</a></li>
+              <li><a href="">Programming & Tech</a></li>
+              <li><a href="">Video Editing</a></li>
+              <li><a href="">Animation</a></li>
+              <li><a href="">Business</a></li>
+              <li><a href="">Photography</a></li>
+              <li><a href="">Audio Editing</a></li>
+              <li><a href="">Voice Over</a></li>
+              <li><a href="">Branding</a></li>
+              <li><a href="">Finance</a></li>
+              <li><a href="">Writing & Translation</a></li>
               </ul>
           </div>
 
           <div>
             <h1 className="font-semibold text-white list-disc font-Inter text-[13px]">About</h1>
             <ul className="font-semibold text-white pl-8 list-disc font-Inter text-[12px]">
-             {about.map((about, index) => (
-              <li key={index}><Link>{about}</Link></li>
-             ))}
+              <li><a href="">Careers</a></li>
+              <li><a href="">Press & News</a></li>
+              <li><a href="">Partnerships</a></li>
+              <li><a href="">Privacy Policy</a></li>
+              <li><a href="">Terms of Service</a></li>
               </ul>
           </div>
 
           <div>
             <h1 className="font-semibold text-white list-disc font-Inter text-[13px]">Support</h1>
             <ul className="font-semibold text-white pl-8 list-disc font-Inter text-[12px]">
-              {support.map((support, index) => (
-                <li key={index}><Link>{support}</Link></li>
-              ))}
+              <li><a href="">Help & Support</a></li>
+              <li><a href="">Trust & Safety</a></li>
+              <li><a href="">Hiring on Linkprosoft</a></li>
+              <li><a href="">Listing on Linkprosoft</a></li>
               </ul>
           </div>
 
           <div>
             <h1 className="font-semibold text-white list-disc font-Inter text-[13px]">Resources</h1>
             <ul className="font-semibold text-white pl-8 list-disc font-Inter text-[12px]">
-              {resources.map((resource, index) => (
-                <li key={index}><Link>{resource}</Link></li>
-              ))}
+              <li><a href="">Success stories</a></li>
+              <li><a href="">Reviews</a></li>
+              <li><a href="">Community</a></li>
+              <li><a href="">Blog</a></li>
               
               </ul>
           </div>

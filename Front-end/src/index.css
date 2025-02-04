@@ -23,8 +23,11 @@ html{
 .swiper-pagination{
     display: none;
 }
-.sidebar {
-    -ms-overflow-style: none; 
-    scrollbar-width: none;  
-  }
+
+@layer base {
+  :root {
+        --radius: 0.5rem;
+    }
+}
+
   

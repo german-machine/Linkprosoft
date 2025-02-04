@@ -9,7 +9,7 @@ const WhychooseUs = () => {
    <section className="mx-auto w-[90%] pt-[45px]">
      <h1 className="text-bluecolor pb-[10px] font-Inter font-bold text-[33px]">Why Choose Linkprosoft?</h1>
 
-    <div className="flex w-[100%] gap-2 flex-wrap">
+    <div className="flex w-[100%] gap-3 flex-wrap">
       <div className="flex flex-col  gap-5 w-[35.3%] items-center ">
         <div className="border-[2px] py-[30px]  px-[50px] text-center leading-[35px]">
             <img src={Verified} alt="" className="mx-auto pb-[10px]" />

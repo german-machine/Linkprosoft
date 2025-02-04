@@ -23,7 +23,7 @@ const PopularSkills = () => {
         slidesPerView={4}
         spaceBetween={30}
         freeMode={true}
-       
+        infinite={true}
         loop={true}
         pagination={{
           clickable: true,
@@ -31,10 +31,6 @@ const PopularSkills = () => {
         modules={[FreeMode, Pagination]}
         className="mySwiper"
       >
-         <SwiperSlide>
-        <p className='w-[280px] font-Inter bg-greybg border-2 font-bold text-[24px] text-greycolor h-[30vh] flex items-center justify-center'>Programming & Tech</p>
-        </SwiperSlide>
-
         <SwiperSlide>
         <p className='w-[280px] font-Inter bg-greybg border-2 font-bold text-[24px] text-greycolor h-[30vh] flex items-center justify-center'>Programming & Tech</p>
         </SwiperSlide>
@@ -63,7 +59,13 @@ const PopularSkills = () => {
         <p className='w-[280px] font-Inter bg-greybg border-2 font-bold text-[24px] text-greycolor h-[30vh] flex items-center justify-center'>Programming & Tech</p>
         </SwiperSlide>
 
-       
+        <SwiperSlide>
+        <p className='w-[280px] font-Inter bg-greybg border-2 font-bold text-[24px] text-greycolor h-[30vh] flex items-center justify-center'>Programming & Tech</p>
+        </SwiperSlide>
+
+        <SwiperSlide>
+        <p className='w-[280px] font-Inter bg-greybg border-2 font-bold text-[24px] text-greycolor h-[30vh] flex items-center justify-center'>Programming & Tech</p>
+        </SwiperSlide>
     
       </Swiper>
   

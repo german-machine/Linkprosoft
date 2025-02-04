@@ -24,7 +24,7 @@ const Hero = () => {
         </div>
 
       <div className="  relative top-[120px] w-[63%] " >
-        <h1 className="font-Inter text-[48px] font-bold text-bluecolor leading-[60px] ">Connecting You with the Best <br />   Skilled Professionals.</h1>
+        <h1 className="font-Inter text-[52px] font-bold text-bluecolor leading-[60px] ">Connecting You with the Best <br />   Skilled Professionals.</h1>
         <p className="pt-[20px] font-Inter text-[15px] text-greycolor">Find and hire experts across various fields with ease and trust.</p>
 
         

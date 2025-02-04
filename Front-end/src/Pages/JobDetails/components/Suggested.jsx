@@ -1,4 +1,4 @@
-import  { useState } from 'react';
+import React, { useState } from 'react';
 import arrow from '../assets/images/arrow.png';
 
 const Suggested = () => {
@@ -9,8 +9,8 @@ const Suggested = () => {
   };
 
   return (
-    <section className="w-full select-none pt-[30px]">
-      <div className="w-[85%] m-auto relative">
+    <section className="w-full pt-[30px]">
+      <div className="w-[80%] m-auto relative">
         <h1 className="font-Inter font-bold pb-2 " >Suggested</h1>
         <div className="flex align-center justify-between w-[57%] pb-4">
           {[
@@ -37,7 +37,6 @@ const Suggested = () => {
         <div className="flex flex-wrap gap-4">
           {/* Dropdown Buttons */}
           {[
-             { label: 'Category', id: 'category' },
             { label: 'Service Option', id: 'serviceOption' },
             { label: 'Budget', id: 'budget' },
             { label: 'Delivery Time', id: 'deliveryTime' },

@@ -16,7 +16,7 @@ const WhatUsersSay = () => {
         slidesPerView={3}
         spaceBetween={10}
         freeMode={true}
-        infinite={true}
+       
         loop={true}
         pagination={{
           clickable: true,

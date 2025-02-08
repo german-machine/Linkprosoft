@@ -1,14 +1,15 @@
 import React from 'react'
 import search from '../assets/images/search.png'
 import profile from '../assets/images/profile.png'
+import { Link } from 'react-router-dom'
 
 const Navbar = () => {
   return (
     <>
-    <header className='w-[100%]  border-b-[#006FA3] border-b-4'>
+    <header className='w-[100%] select-none  border-b-[#006FA3] border-b-4'>
     <nav className='flex align-center w-[90%] justify-between m-auto pt-9 pb-4' >
-      <div className="text-3xl font-bold text-bluecolor font-Inter w-[15%]"   >
-                    <h1 >LINKPROSOFT</h1>
+      <div className="text-3xl font-bold text-bluecolor font-Inter w-[15%] cursor-pointer"   >
+                    <Link to='/'>Linkprosoft.</Link>
       </div>
 
       <div className='flex  w-[45%] justify-between flex-wrap'>

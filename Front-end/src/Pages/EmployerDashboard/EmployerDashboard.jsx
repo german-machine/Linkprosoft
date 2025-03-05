@@ -15,6 +15,7 @@ import Reports from './routes/Reports'
 import SavedLists from './routes/SavedLists'
 import PaymentMethod from './routes/PaymentMethod'
 import Help from './routes/Help'
+import JobPosting from './routes/JobPosting'
 
 const EmployerDashboard = () => {
   return (
@@ -42,6 +43,7 @@ const EmployerDashboard = () => {
             <Route path="payment-method" element={<PaymentMethod />} />
             <Route path="help" element={<Help />} />
             <Route path="cards" element={<Cards />} />
+            <Route path="job-posting" element={<JobPosting />} />
             {/* Add other routes here */}
           </Routes>
         </div>

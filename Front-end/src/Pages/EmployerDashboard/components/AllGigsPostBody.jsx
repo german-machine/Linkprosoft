@@ -40,16 +40,16 @@ const AllGigsPostBody = () => {
       <div className="w-[100%] select-none mt-10 flex flex-wrap gap-4">
         {feedData.map((feed, index) => (
           feed.isPostOpening ? (
-            <div key={index} className='border border-[#000000] border-dashed px-3 py-5 rounded-lg w-[22%]'>
+            <Link to="/EmployerDashboard/job-posting" key={index} className='border border-[#000000] border-dashed px-3 py-5 rounded-lg w-[22%]'>
               <div className='flex bg-[#D9D9D9] w-[25px] m-auto items-center justify-center rounded-full h-[25px]'>
                 <FaPlus className='text-sm text-[#798387]'/>
               </div>
               <div className='mt-4 text-xl flex flex-col align-center justify-center'>
                 <p className='font-Inter text-center text-l font-bold'>Post an Opening</p>
                 <p className='text-[#798387] text-center text-[12px] pt-3 mb-3 leading-tight font-bold'>Create a new Gigs post and get propositions from Gigs seekers</p>
-                <Link className='font-Inter m-auto text-bold text-sm font-bold py-1 w-[90%] border-2 align-center text-center rounded-md border-[#03AEFF]'>Post a new Gig</Link>
+                <span className='font-Inter m-auto text-bold text-sm font-bold py-1 w-[90%] border-2 align-center text-center rounded-md border-[#03AEFF]'>Post a new Gig</span>
               </div>
-            </div>
+            </Link>
           ) : (
             <div key={index} className='flex w-[22%] flex-col'>
               <img src={feed.img} alt="" className='h-[100px] object-contain rounded-t-lg'/>

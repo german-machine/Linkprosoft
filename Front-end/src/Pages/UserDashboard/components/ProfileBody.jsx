@@ -17,9 +17,6 @@ const ProfileBody = () => {
                 <img src={profile2} alt="" className='w-[100%] pb-2'/>
                 <Link className='text-[#006FA3] underline underline-[#006FA3] decoration-dashed'>Upload Image</Link>
             </div>
-
-
-
          
         </section>
    </>

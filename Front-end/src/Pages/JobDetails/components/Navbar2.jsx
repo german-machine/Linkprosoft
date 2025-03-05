@@ -19,7 +19,7 @@ const Navbar = () => {
         </div>
       </div>
 
-      <div className='flex w-[22%] flex align-center justify-between'>
+      <div className=' w-[22%] flex align-center justify-between'>
         <a href="/" className='bg-[#03AEFF] font-Inter text-white justify py-2 px-5 rounded-md'>Post Gigs</a>
         <a href="/" className='bg-[#006FA3] font-Inter text-white justify py-2 px-5 rounded-md '>Sign In</a>
         <div className='w-[16%] h-[40px] flex rounded-full align-center justify-center '>

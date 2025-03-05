@@ -12,9 +12,9 @@ const Navbar = () => {
 
                 <nav className="flex items-center gap-5 font-Inter text-greycolor text-[17px] ">
                    <Link to="/">Home</Link>
-                   <Link to="/about">About</Link>
-                   <Link to="/JobSearch">How It Works</Link>
-                   <Link to="/JobDetails">Contact Us</Link>
+                   <Link to="/UserDashboard">About</Link>
+                   <Link to="/Onboarding">How It Works</Link>
+                   <Link to="/EmployerDashboard">Contact Us</Link>
                 </nav>
 
                 <div className="flex gap-3 text-[15px]">

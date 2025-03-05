@@ -7,7 +7,7 @@ const Feed = () => {
         <div className="flex gap-[1%] flex-wrap">
             {feedData.map((feed, index) => (
                  <div key={index} className=" w-[24%]  h-[310px] ">
-                 <div className="bg-red-600 w-[100%]  br-[20px] relative rounded-[15px]">
+                 <div className=" w-[100%]  br-[20px] relative rounded-[15px]">
                      <img src={feed.img} alt="profile"  className='h-[150px] object-fit'/>
                      <div className="w-[15%] h-[30%] rounded-full absolute left-[230px] top-[100px] ">
                          <img src={feed.profile}/>

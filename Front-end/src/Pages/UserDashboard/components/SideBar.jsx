@@ -39,11 +39,11 @@ const SideBar = () => {
                 </div>
                 </div>
 
-        <Link className='relative mb-2 left-12 h-[7%] w-[10%] flex items-center justify-center rounded-full bg-[#F6F6F6]'>
+        <Link className='relative mb-3 left-10 h-[7%] w-[10%] flex items-center justify-center rounded-full bg-[#F6F6F6]'>
         <IoSettingsSharp className='text-xl'/>
         </Link>
 
-        <Link className='relative  left-12 font-bold '>
+        <Link className='relative underline text-sm text-blue-500 left-10  font-semibold '>
         License
         </Link>
     </section>

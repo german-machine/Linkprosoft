@@ -34,14 +34,18 @@ const SideBar = () => {
                    </div>
                 </div>
 
-                <div className='w-full pb-5'>
+                <div className='w-full pb-3'>
                     <SidenavLinks/>
                 </div>
-        </div>
+                </div>
 
-        <div className='relative top-3 left-12 h-[50px] w-[50px] flex items-center justify-center rounded-full bg-[#F6F6F6]'>
-        <IoSettingsSharp className='text-[30px]'/>
-        </div>
+        <Link className='relative mb-2 left-12 h-[7%] w-[10%] flex items-center justify-center rounded-full bg-[#F6F6F6]'>
+        <IoSettingsSharp className='text-xl'/>
+        </Link>
+
+        <Link className='relative  left-12 font-bold '>
+        License
+        </Link>
     </section>
     </>
   )

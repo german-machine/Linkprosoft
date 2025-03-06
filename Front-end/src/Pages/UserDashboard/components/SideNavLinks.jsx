@@ -29,7 +29,7 @@ const SideNavLinks = () => {
         {menu.map((item, index) => (
           <li
             key={index}
-            className={`flex items-center gap-2 md:gap-2 cursor-pointer transition-colors duration-300 py-2 pl-4 rounded-xl mb-3 group ${
+            className={`flex items-center gap-2 md:gap-2 cursor-pointer transition-colors duration-300 py-2 pl-4 rounded-xl mb-2 group ${
               active.startsWith(item.path) ? 'bg-black text-white' : 'bg-[#F6F6F6] text-black hover:bg-black hover:text-white'
             }`}
           >

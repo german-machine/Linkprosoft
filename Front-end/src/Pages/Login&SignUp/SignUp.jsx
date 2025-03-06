@@ -1,11 +1,11 @@
 import React from 'react'
-import Nav from './components/Nav'
 import { Link } from 'react-router-dom'
+import HeaderBanner from './components/HeaderBanner'
 
 const SignUp = () => {
   return (
     <>
-      <Nav />
+    <HeaderBanner/>
 
       <section>
         <div>

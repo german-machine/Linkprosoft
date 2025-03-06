@@ -11,7 +11,7 @@ const UserDashboard = () => {
       </section>
 
       <section className='w-full flex z-2 gap-2'>
-        <div className='fixed top-28 overflow-y-auto scrollbar-hide w-[30%]'>
+        <div className='fixed top-28 overflow-y-auto scrollbar-hide w-[25%]'>
           <Sidebar />
         </div>
         <div className='ml-[30%] mt-28 h-[calc(100vh-4rem)] w-[67%]  px-2'>

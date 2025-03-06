@@ -10,9 +10,9 @@ const SideBar = () => {
     <>
     <section className='w-full bg-white select-none h-[calc(100vh-8rem)] pb-11 scrollbar-hide top-0 overflow-y-auto'>
         <div className='w-[80%] m-auto '>
-                <div className='bg-[#F6F6F6] flex flex-col items-center rounded-lg m-auto w-[100%] py-5'>
-                   <div className='flex items-center gap-4 w-[70%]'>
-                   <div className='w-[25%]'>
+                <div className='bg-[#F6F6F6] flex flex-col items-center rounded-lg m-auto w-[100%] py-2'>
+                   <div className='flex ml-9 items-center gap-4 w-[90%]'>
+                   <div className='w-[20%]'>
                         <img src={worker} alt="" />
                     </div>
                     <div className='leading-tight'>
@@ -38,8 +38,8 @@ const SideBar = () => {
                 </div>
         </div>
 
-        <div className='relative top-10 left-12 h-[50px] w-[50px] flex items-center justify-center rounded-full bg-[#F6F6F6]'>
-        <IoSettingsSharp className='text-[35px]'/>
+        <div className='relative top-3 left-12 h-[50px] w-[50px] flex items-center justify-center rounded-full bg-[#F6F6F6]'>
+        <IoSettingsSharp className='text-[30px]'/>
         </div>
     </section>
     </>

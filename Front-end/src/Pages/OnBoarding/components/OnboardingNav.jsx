@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import search from '../../JobDetails/assets/images/search.png'
+// import search from '../../JobDetails/assets/images/search.png'
 import profile from '../../JobDetails/assets/images/profile.png'
 
 

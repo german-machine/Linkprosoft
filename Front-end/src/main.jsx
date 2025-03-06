@@ -23,6 +23,10 @@ import Pending from './Pages/UserDashboard/Routes/Pending.jsx'
 import Completed from './Pages/UserDashboard/Routes/Completed.jsx'
 import Rejected from './Pages/UserDashboard/Routes/Rejected.jsx'
 import Onboarding from './Pages/OnBoarding/Onboarding.jsx'
+import SignUp from './Pages/Login&SignUp/SignUp.jsx'
+import ProfessionalSignUp from './Pages/Login&SignUp/ProfessionalSignUp.jsx'
+import EmployerSignUp from './Pages/Login&SignUp/EmployerSignUp.jsx'
+import Login from './Pages/Login&SignUp/Login.jsx'
 
 const router = createBrowserRouter([
   {
@@ -79,7 +83,16 @@ const router = createBrowserRouter([
   {
     path: '/Onboarding',
     element: <Onboarding />,
-  }
+  },
+  {
+    path: '/signup',
+    element: <SignUp />,
+    children: [
+      { path: 'professional', element: <ProfessionalSignUp /> },
+      { path: 'employer', element: <EmployerSignUp /> },
+      { path: 'login', element: <Login /> },
+    ],
+  },
 ])
 
 createRoot(document.getElementById('root')).render(

@@ -19,7 +19,7 @@ const Navbar = () => {
 
           <div className="flex gap-3 text-[15px]">
             <Link to="/signup" className="bg-bluecolor text-white font-Inter py-[10px] px-[25px] rounded-tl-[40px] rounded-br-[40px]">Sign Up</Link>
-            <Link to="/signup/login" className="border text-bluecolor border-bluecolor bg-#006FA3 font-Inter py-[10px] px-[25px] rounded-tl-[40px] rounded-br-[40px]">Login</Link>
+            <Link to="/Login" className="border text-bluecolor border-bluecolor bg-#006FA3 font-Inter py-[10px] px-[25px] rounded-tl-[40px] rounded-br-[40px]">Login</Link>
           </div>
         </nav>
       </header>

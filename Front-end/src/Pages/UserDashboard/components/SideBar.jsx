@@ -25,11 +25,11 @@ const SideBar = () => {
                    <div className='w-[70%] pt-2'>
                     <Link className='font-Inter text-[#006FA3] text-[13px] decoration-underline'>Complete your profile</Link>
                     <div className='flex items-center justify-between'>
-                        <div className='w-[80%] bg-white h-2 rounded'>
+                        <div className='w-[70%] bg-white h-2 rounded'>
                             <div className='w-[60%] bg-[#006FA3] h-2 rounded'></div>
                         </div>
 
-                            <h2>70%</h2>
+                            <h2 className='font-Inter ffont-bold text-sm'>70%</h2>
                     </div>
                    </div>
                 </div>

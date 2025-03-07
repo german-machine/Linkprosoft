@@ -23,6 +23,11 @@ import Pending from './Pages/UserDashboard/Routes/Pending.jsx'
 import Completed from './Pages/UserDashboard/Routes/Completed.jsx'
 import Rejected from './Pages/UserDashboard/Routes/Rejected.jsx'
 import Onboarding from './Pages/OnBoarding/Onboarding.jsx'
+import SignUp from './Pages/Login&SignUp/SignUp.jsx'
+import Login from './Pages/Login&SignUp/EmployerLogin.jsx'
+import EmployerSignup from './Pages/Login&SignUp/EmployerSignUp.jsx'
+import ProfesionalLogin from './Pages/Login&SignUp/ProfesionalLogin.jsx'
+import ProfessionalSignUp from './Pages/Login&SignUp/ProfessionalSignUp.jsx'
 // import SignUp from './Pages/Login&SignUp/SignUp.jsx'
 // import ProfessionalSignUp from './Pages/Login&SignUp/ProfessionalSignUp.jsx'
 // import EmployerSignUp from './Pages/Login&SignUp/EmployerSignUp.jsx'
@@ -84,6 +89,30 @@ const router = createBrowserRouter([
     path: '/Onboarding',
     element: <Onboarding />,
   },
+  {
+    path: '/SignUp',
+    element: <SignUp/>,
+  },
+  {
+    path: '/EmployerSignUp',
+    element: <EmployerSignup/>,
+  },
+  {
+    path: '/Login',
+    element: <Login/>,
+  },
+  {
+    path: '/ProffesionalLogin',
+    element: <ProfesionalLogin/>,
+  },
+  {
+    path: '/ProffesionalSignUp',
+    element: <ProfessionalSignUp/>,
+  },
+  
+  
+
+  
   // {
   //   path: '/signup',
   //   element: <SignUp />,

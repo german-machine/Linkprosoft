@@ -4,6 +4,7 @@ import { HiOutlineUserCircle } from "react-icons/hi2";
 import { Link } from 'react-router-dom';
 
 
+
 const HeaderBanner = ({ showSignInButton = true, navColor = "bg-[#f6f6f6]", border = "border-[#006FA3]" }) => {
     return (
         <header className={`${navColor} w-full border-b-4 ${border} sticky z-[1000] top-0 rounded-t-lg`}>
@@ -11,7 +12,7 @@ const HeaderBanner = ({ showSignInButton = true, navColor = "bg-[#f6f6f6]", bord
                 <div className="flex items-center justify-between h-16">
                     {navColor === "bg-[#f6f6f6]" ?
                         <div className='flex-shrink-0'>
-                            <h1 className='text-[#006FA3] font-bold text-[25px] h-8 w-auto'>LINKPROSOFT</h1>
+                            <Link className='text-[#006FA3] font-bold text-[25px] h-8 w-auto'>LINKPROSOFT</Link>
                         </div> :
 
                         <div className='flex-shrink-0'>

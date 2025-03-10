@@ -20,7 +20,7 @@ const Hero = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentPhraseIndex((prevIndex) => (prevIndex + 1) % phrases.length);
-    }, 3000); // Change phrase every 3 seconds
+    }, 2000); // Change phrase every 3 seconds
 
     return () => clearInterval(interval);
   }, []);

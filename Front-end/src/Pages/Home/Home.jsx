@@ -7,6 +7,7 @@ import WhychooseUs from "./components/WhychooseUs"
 import Testimonial from "./components/Testimonial"
 import CallToAction from "./components/CallToAction"
 import Footer from "./components/Footer"
+import Newsletter from "./components/Newsletter"
 
 const Home = () => {
   return (
@@ -19,6 +20,7 @@ const Home = () => {
     <WhychooseUs></WhychooseUs>
     <Testimonial></Testimonial>
     <CallToAction/>
+    <Newsletter/>
     <Footer></Footer>
     </>
   )

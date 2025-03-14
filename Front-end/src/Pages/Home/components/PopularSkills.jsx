@@ -14,7 +14,7 @@ const PopularSkills = () => {
 
   return (
     <>
-      <section className='w-full py-5 lg:py-10'>
+      <section className='w-full py-5 lg:py-10 font-Inter'>
         <div className="w-[95%] lg:w-[80%] mx-auto">
           <h1 className="text-bluecolor font-Inter font-bold text-[30px]">Popular Skills Near You:</h1>
 

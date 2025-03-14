@@ -16,9 +16,9 @@ const Home = () => {
     <Navbar/>
     <Hero></Hero>
     <PopularSkills></PopularSkills>
-    {/* <HowitWorks></HowitWorks>
+    <HowitWorks></HowitWorks>
     <WhychooseUs></WhychooseUs>
-    <Testimonial></Testimonial>
+    {/* <Testimonial></Testimonial>
     <CallToAction/>
     <Newsletter/>
     <Footer></Footer> */}

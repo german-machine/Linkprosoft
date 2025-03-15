@@ -6,7 +6,7 @@ import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
 import { EffectCoverflow, Pagination } from "swiper/modules";
 import Person6 from "../../../assets/images/Person6.png";
-import Vector from "../../../assets/images/Vector.png";
+
 
 const testimonials = [
   {
@@ -14,7 +14,7 @@ const testimonials = [
     name: "John, D",
     position: "CEO, Tech Innovators Inc.",
     image: Person6,
-    text: `"As the CEO of Tech Innovators Inc., finding top-tier talent to join our team is a top priority. Partnering with Linkprosoft has been a transformative experience for our hiring process."`
+    text: `"As the CEO of Tech Innovators Inc., finding top-tier talent to join our team is a top priority."`
   },
   {
     id: 2,
@@ -31,78 +31,86 @@ const testimonials = [
     text: `"Working with Linkprosoft made hiring seamless and efficient. Highly recommend!"`
   },
   {
-    id: 3,
+    id: 4,
     name: "Michael Doe",
     position: "Founder, AI Solutions",
     image: Person6,
     text: `"Working with Linkprosoft made hiring seamless and efficient. Highly recommend!"`
   },
   {
-    id: 3,
+    id: 5,
     name: "Michael Doe",
     position: "Founder, AI Solutions",
     image: Person6,
     text: `"Working with Linkprosoft made hiring seamless and efficient. Highly recommend!"`
   },
   {
-    id: 3,
+    id: 6,
     name: "Michael Doe",
     position: "Founder, AI Solutions",
     image: Person6,
     text: `"Working with Linkprosoft made hiring seamless and efficient. Highly recommend!"`
+  },
+  {
+    id: 7,
+    name: "Michael Doe",
+    position: "Founder, AI Solutions",
+    image: Person6,
+    text: `"Partnering with Linkprosoft has been a transformative experience for our hiring process."`
   },
 ];
 
 const WhatUsersSay = () => {
+  const slides_per_view = window.innerWidth > 768 ? 2.5 : 1.1;
+  const space_between = window.innerWidth > 768 ? -60 : "15";
   return (
     <>
-      <section className="w-[90%] relative left-[70px] pt-[100px] pb-[30px]">
-        <h1 className="text-bluecolor pb-[10px] font-Inter font-bold text-[30px]">
-          What Our Users Say
-        </h1>
+      <section className="w-full">
+        <div className="w-[95%] lg:w-[80%] mx-auto py-8">
+          <h1 className="text-bluecolor pb-[10px] font-Inter font-bold text-[30px]">
+            What Our Users Say
+          </h1>
 
-        <Swiper
-          effect="coverflow"
-          grabCursor={true}
-          centeredSlides={true}
-          slidesPerView="2.5"
-          coverflowEffect={{
-            rotate: 0,
-            stretch: 0,
-            depth: 100,
-            modifier: 2.5,
-            slideShadows: false,
-          }}
-          pagination={{ clickable: true }}
-          modules={[EffectCoverflow, Pagination]}
-          className="w-[100%]"
-        >
-          {testimonials.map((testimonial) => (
-            <SwiperSlide key={testimonial.id} className="w-[100%]">
-              <div className="w-full bg-orangecolor pb-[120px] rounded-[20px] p-24 shadow-lg">
-                <div className="text-[11px] font-Inter text-greycolor">
-                  <p className="pb-[15px]">{testimonial.text}</p>
-                </div>
+          <Swiper
+            effect={"coverflow"}
+            grabCursor={true}
+            centeredSlides={false}
+            slidesPerView={slides_per_view}
+            spaceBetween={space_between}
+            coverflowEffect={{
+              rotate: -10,
+              stretch: 0,
+              depth: 100,
+              modifier: 1,
+              slideShadows: false,
+            }}
+            pagination={{ clickable: true }}
+            modules={[EffectCoverflow, Pagination]}
+            className="mySwiper"
+          >
+            {testimonials.map((testimonial) => (
+              <SwiperSlide key={testimonial.id} className="w-[100%]">
+                <div className="w-full lg:w-[80%] mx-auto bg-orangecolor py-8 rounded-[20px]">
+                  <div className="">
+                    <div className="py-3 mb-5">
+                      <p className="text-[16px] max-w-[80%] mx-auto text-center font-[400] font-Inter">{testimonial.text}</p>
+                    </div>
 
-                <div className="flex items-center mt-6">
-                  <img
-                    src={testimonial.image}
-                    alt={testimonial.name}
-                    className="w-[70px] h-[70px] rounded-full"
-                  />
-                  <div className="pl-3">
-                    <h1 className="font-bold text-[25px]">{testimonial.name}</h1>
-                    <h1 className="font-semibold text-[14px]">{testimonial.position}</h1>
+                    <div className="flex justify-center gap-2 items-center">
+                      <div className="w-[20%]">
+                        <img src={testimonial.image} alt="" />
+                      </div>
+                      <div>
+                        <h2 className="font-bold">{testimonial.name}</h2>
+                        <h4 className="font-semibold">{testimonial.position}</h4>
+                      </div>
+                    </div>
+
                   </div>
                 </div>
-              </div>
-            </SwiperSlide>
-          ))}
-        </Swiper>
-
-        <div className="flex items-center justify-end w-[95%] relative top-5 text-center">
-          <p className="font-bold font-Inter text-greencolor">See more</p>
-          <img src={Vector} alt="" className="pt-1 pl-2" />
+              </SwiperSlide>
+            ))}
+          </Swiper>
         </div>
       </section>
     </>

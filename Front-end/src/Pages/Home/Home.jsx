@@ -13,15 +13,15 @@ const Home = () => {
   return (
     <>
     
-    <Navbar/>
-    <Hero></Hero>
-    <PopularSkills></PopularSkills>
-    <HowitWorks></HowitWorks>
-    <WhychooseUs></WhychooseUs>
-    {/* <Testimonial></Testimonial>
-    <CallToAction/>
-    <Newsletter/>
-    <Footer></Footer> */}
+    <Navbar />
+    <Hero />
+    <PopularSkills />
+    <HowitWorks />
+    <WhychooseUs />
+    <Testimonial />
+    <CallToAction />
+    {/* <Newsletter/> */}
+    {/* <Footer /> */}
     </>
   )
 }

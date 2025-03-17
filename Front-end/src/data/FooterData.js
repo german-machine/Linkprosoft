@@ -1,3 +1,10 @@
+export const industries = [
+  'Aviation',
+  'Transportation',
+  'Healthcare',
+  'Government'
+]
+
 export const categories = [
     'Graphic & Design',
     'Digital Marketing',

@@ -3,29 +3,30 @@ import { IoIosMail } from "react-icons/io";
 import { Link } from 'react-router-dom';
 const Newsletter = () => {
   return (
-   <>
-   
-   <section className='bg-[#267BB4] flex items-center'>
-    <div className='flex items-center flex-col pt-4 pb-9 w-[50%] m-auto'>
-            {/* <img src={mail} alt="" /> */}
-            <IoIosMail className='text-white text-7xl'/>
-            
-            <h2 className='font-Inter text-3xl text-white leading-normal font-bold'>Subscribe Newsletter</h2>
-            <p className='font-Inter text-white font-semibold text-center mb-4 text-[13px]'>You will never miss an update, new release and latest news, Our newsletter will  be <br /> delivered once a week.</p>
+    <>
 
-            <div className='flex bg-white w-full rounded-full  mb-2 justify-between'>
-            <input className=" focus:border-transparent outline-none font-Inter bg-transparent pl-8 w-[60%] text-[14px]   flex-wrap" type="text" placeholder="Enter your email" />
+      <section className='w-full bg-[#267BB4] flex items-center'>
+        <div className="w-[95%] lg:w-[80%] mx-auto flex flex-col items-center py-6">
+          <div className=''>
+            <IoIosMail className='text-white text-7xl' />
+          </div>
 
-                <Link className='bg-[#03AEFF] py-3 text-white font-bold font-Inter text-lg  px-6 rounded-r-full'>
-                    Subscribe
-                </Link>
+          <div>
+            <h2 className='text-center font-Inter text-3xl text-white leading-normal font-bold'>Subscribe Newsletter</h2>
+            <p className='font-Inter text-white font-semibold text-center mb-4 text-[13px]'>You will never miss an update, new release and latest news, Our newsletter will be delivered once a week.</p>
+          </div>
 
-            </div>
+          <div className='w-full lg:w-[65%] mx-auto flex justify-between items-center bg-white rounded-full'>
+            <input type="email" className='focus:border-transparent outline-none w-[70%] px-5 bg-transparent' placeholder='Enter your email' />
+            <Link className='w-[30%] text-center text-white font-bold font-Inter text-lg bg-[#03AEFF] py-1 lg:py-2 rounded-r-full'>Subscribe</Link>
+          </div>
 
+          <div className='py-3'>
             <p className='font-Inter text-white font-bold text-[13px]'>We promise not to SPAM you</p>
-    </div>
-   </section>
-   </>
+          </div>
+        </div>
+      </section>
+    </>
   )
 }
 

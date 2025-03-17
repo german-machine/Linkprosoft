@@ -8,6 +8,7 @@ import Testimonial from "./components/Testimonial"
 import CallToAction from "./components/CallToAction"
 import Footer from "./components/Footer"
 import Newsletter from "./components/Newsletter"
+import Copyright from "../../components/Copyright"
 
 const Home = () => {
   return (
@@ -21,7 +22,8 @@ const Home = () => {
     <Testimonial />
     <CallToAction />
     <Newsletter/>
-    {/* <Footer /> */}
+    <Footer />
+    <Copyright />
     </>
   )
 }

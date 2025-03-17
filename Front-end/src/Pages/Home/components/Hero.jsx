@@ -46,8 +46,8 @@ const Hero = () => {
               </div>
 
               <div className="w-full py-6">
-                <h1 className="max-w-[85%] lg:max-w-full font-Inter text-[38px] lg:text-[40px] font-semibold text-bluecolor leading-[48px] lg:leading-[60px]">
-                  Connecting You with the Best <br />
+                <h1 className="max-w-full font-Inter text-[38px] lg:text-[40px] font-semibold text-bluecolor leading-[48px] lg:leading-[60px]">
+                  Connecting You with the Best 
                   <span className="phrase-animation leading-[48px]">{phrases[currentPhraseIndex]}</span>
                 </h1>
                 <p className="font-Inter text-[16px] text-greycolor py-3">

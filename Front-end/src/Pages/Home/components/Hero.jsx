@@ -67,13 +67,13 @@ const Hero = () => {
           <div className='w-full lg:w-[65%] flex flex-col justify-between'>
             <div className="w-full mx-auto flex justify-center">
               <div className='flex flex-col gap-6'>
-                <img src={Person1} alt="" className="w-[80%] mx-auto rounded-tl-[40px] rounded-br-[40px]" />
-                <img src={Person2} alt="" className="w-[80%] mx-auto rounded-tl-[40px] rounded-br-[40px]" />
+                <img src={Person1} alt="" className="w-[90%] mx-auto rounded-tl-[40px] rounded-br-[40px]" />
+                <img src={Person2} alt="" className="w-[90%] mx-auto rounded-tl-[40px] rounded-br-[40px]" />
               </div>
 
               <div className='flex flex-col gap-6 mt-5'>
-                <img src={Person3} alt="" className="w-[80%] mx-auto rounded-tl-[40px] rounded-br-[40px]" />
-                <img src={Person4} alt="" className="w-[80%] mx-auto rounded-tl-[40px] rounded-br-[40px]" />
+                <img src={Person3} alt="" className="w-[90%] mx-auto rounded-tl-[40px] rounded-br-[40px]" />
+                <img src={Person4} alt="" className="w-[90%] mx-auto rounded-tl-[40px] rounded-br-[40px]" />
               </div>
             </div>
 

@@ -31,7 +31,7 @@ const Footer = () => {
             <div className="flex flex-col lg:flex-row gap-5">
               <div>
                 <h1 className="font-semibold text-white list-disc font-Inter text-[13px] mb-2">Categories</h1>
-                <ul className="font-semibold text-white pl-6 lg:pl-8 list-disc font-Inter text-[12px] flex flex-col gap-2">
+                <ul className="text-white pl-6 lg:pl-8 list-disc font-Inter text-[12px] flex flex-col gap-2">
                   {categories.map((category, index) => (
                     <li key={index}><Link>{category}</Link></li>
                   ))}
@@ -40,7 +40,7 @@ const Footer = () => {
 
               <div>
                 <h1 className="font-semibold text-white list-disc font-Inter text-[13px] mb-2">About</h1>
-                <ul className="font-semibold text-white pl-6 lg:pl-8 list-disc font-Inter text-[12px] flex flex-col gap-2">
+                <ul className="text-white pl-6 lg:pl-8 list-disc font-Inter text-[12px] flex flex-col gap-2">
                   {about.map((about, index) => (
                     <li key={index}><Link>{about}</Link></li>
                   ))}
@@ -51,7 +51,7 @@ const Footer = () => {
             <div className="flex flex-col lg:flex-row gap-5">
               <div>
                 <h1 className="font-semibold text-white list-disc font-Inter text-[13px] mb-2">Industries</h1>
-                <ul className="font-semibold text-white pl-6 lg:pl-8 list-disc font-Inter text-[12px] flex flex-col gap-2">
+                <ul className="text-white pl-6 lg:pl-8 list-disc font-Inter text-[12px] flex flex-col gap-2">
                   {support.map((industries, index) => (
                     <li key={index}><Link>{industries}</Link></li>
                   ))}
@@ -60,7 +60,7 @@ const Footer = () => {
 
               <div>
                 <h1 className="font-semibold text-white list-disc font-Inter text-[13px] mb-2">Support</h1>
-                <ul className="font-semibold text-white pl-6 lg:pl-8 list-disc font-Inter text-[12px] flex flex-col gap-2">
+                <ul className="text-white pl-6 lg:pl-8 list-disc font-Inter text-[12px] flex flex-col gap-2">
                   {support.map((support, index) => (
                     <li key={index}><Link>{support}</Link></li>
                   ))}
@@ -69,7 +69,7 @@ const Footer = () => {
 
               <div>
                 <h1 className="font-semibold text-white list-disc font-Inter text-[13px] mb-2">Resources</h1>
-                <ul className="font-semibold text-white pl-6 lg:pl-8 list-disc font-Inter text-[12px] flex flex-col gap-2">
+                <ul className="text-white pl-6 lg:pl-8 list-disc font-Inter text-[12px] flex flex-col gap-2">
                   {resources.map((resource, index) => (
                     <li key={index}><Link>{resource}</Link></li>
                   ))}

@@ -66,7 +66,7 @@ const WhatUsersSay = () => {
   return (
     <>
       <section className="w-full">
-        <div className="w-[95%] lg:w-[80%] mx-auto py-8">
+        <div className="w-[95%] lg:w-[85%] mx-auto py-8">
           <h1 className="text-bluecolor pb-[10px] font-Inter font-bold text-[30px]">
             What Our Users Say
           </h1>

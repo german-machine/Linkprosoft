@@ -14,13 +14,13 @@ const Navbar = () => {
   return (
     <>
       <header className="bg-white w-[100%] sticky z-[1000] top-0 left-0 right-0">
-        <nav className="w-[90%] lg:w-[80%] py-[15px] mx-auto flex justify-between items-center">
+        <nav className="w-[90%] lg:w-[90%] py-[15px] mx-auto flex justify-between items-center">
           <div className="text-4xl font-bold text-bluecolor font-Inter cursor-pointer">
             <Link to='/'>Linkprosoft.</Link>
           </div>
 
-          <div className={`${isToggled ? 'top-[100%]' : 'top-[-1000%] z-[1000]'} left-0 flex flex-col lg:flex-row items-center w-full lg:top-0 py-6 lg:py-0 duration-[1s] bg-bluecolor lg:bg-transparent absolute lg:relative items-center justify-between font-Inter text-greycolor text-[17px] `}>
-            <div className={`flex flex-col lg:flex-row justify-around items-center gap-4 lg:gap-0 mb-10 lg:mb-0 w-[80%] lg:w-[45%] xl:w-[40%] mx-auto text-white lg:text-black`}>
+          <div className={`${isToggled ? 'top-[100%]' : 'top-[-1000%] z-[1000]'} left-0 flex flex-col lg:flex-row w-full lg:top-0 py-6 lg:py-0 duration-[1s] bg-bluecolor lg:bg-transparent absolute lg:relative items-center justify-between font-Inter text-greycolor text-[17px] `}>
+            <div className={`flex flex-col lg:flex-row justify-around items-center gap-4 lg:gap-0 mb-10 lg:mb-0 w-[80%] lg:w-[50%] xl:w-[40%] mx-auto text-white lg:text-black`}>
               <Link to="/">Home</Link>
               <Link to="/UserDashboard">About</Link>
               <Link to="/JobDetails">How It Works</Link>

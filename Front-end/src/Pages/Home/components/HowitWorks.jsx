@@ -4,7 +4,7 @@ const HowitWorks = () => {
   return (
     <>
       <section className="w-full">
-        <div className="w-[95%] lg:w-[80%] mx-auto py-8">
+        <div className="w-[95%] lg:w-[85%] mx-auto py-8">
           <h1 className="text-bluecolor pb-[10px] font-Inter font-bold text-[30px]">How Linkprosoft Works:</h1>
 
           <div className="w-full flex flex-col lg:flex-row items-left lg:items-center justify-start lg:justify-center flex-nowrap gap-8 font-Inter lg:gap-4">

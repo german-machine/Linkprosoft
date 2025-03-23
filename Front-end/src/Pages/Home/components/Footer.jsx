@@ -9,7 +9,7 @@ const Footer = () => {
   return (
     <>
       <footer className="w-full bg-bluecolor">
-        <div className="w-[95%] lg:w-[80%] mx-auto py-6 lg:flex justify-center">
+        <div className="w-[95%] lg:w-[85%] mx-auto py-6 lg:flex justify-center">
 
           <div className="w-full lg:w-[40%] mx-auto flex flex-col items-center justify-center gap-2">
             <h1 className="font-Inter text-white text-[30px] font-bold">Linkprosoft.</h1>

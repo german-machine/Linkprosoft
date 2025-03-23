@@ -15,7 +15,7 @@ const PopularSkills = () => {
   return (
     <>
       <section className='w-full py-5 lg:py-10 font-Inter'>
-        <div className="w-[95%] lg:w-[80%] mx-auto">
+        <div className="w-[95%] lg:w-[85%] mx-auto">
           <h1 className="text-bluecolor font-Inter font-bold text-[30px]">Popular Skills Near You:</h1>
 
           <div className='w-[95%] mx-auto py-4 flex flex-wrap lg:flex-nowrap gap-y-4 lg:gap-y-0 lg:gap-x-4'>

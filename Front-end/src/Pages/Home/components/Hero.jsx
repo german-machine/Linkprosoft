@@ -28,10 +28,10 @@ const Hero = () => {
   return (
     <>
       <section className='w-full py-5 lg:py-10'>
-        <div className="w-[95%] lg:w-[80%] mx-auto flex flex-col lg:flex-row">
+        <div className="w-[95%] lg:w-[85%] mx-auto flex flex-col lg:flex-row">
           <div className='w-full px-3 lg:flex lg:flex-col lg:justify-between'>
             <div>
-              <div className='w-full mx-aut flex justif items-center flex-nowrap'>
+              <div className='w-full flex items-center flex-nowrap'>
                 <div className="w-full lg:w-[80%] flex justify-around lg:justify-between items-center lg:gap-[2%] lg:px-6 py-1 border border-bluecolor rounded-tl-[35px] rounded-br-[35px]">
                   <img src={Search} alt="" className="hidden lg:block mr-[2%]" width={20} />
                   <input
@@ -41,7 +41,7 @@ const Hero = () => {
                   />
                   <img src={Filter} className='pr-2' alt="" width={25} />
                 </div>
-                <a className="inline-bloc bg-bluecolor text-white text-sm text-center font-Inter w-auto lg:w-[15%] py-[12px] lg:py-[10px] px-[20px] lg:py-[15px] lg:px-[px] rounded-tl-[40px] rounded-br-[40px]"
+                <a className="bg-bluecolor text-white text-sm text-center font-Inter w-auto lg:w-[15%] py-[12px] px-[20px] lg:py-[15px] lg:px-[18px] rounded-tl-[40px] rounded-br-[40px]"
                   href="#">Search</a>
               </div>
 
@@ -67,13 +67,13 @@ const Hero = () => {
           <div className='w-full lg:w-[65%] flex flex-col justify-between'>
             <div className="w-full mx-auto flex justify-center">
               <div className='flex flex-col gap-6'>
-                <img src={Person1} alt="" className="w-[85%] w-[90%] mx-auto rounded-tl-[40px] rounded-br-[40px]" />
-                <img src={Person2} alt="" className="w-[85%] w-[90%] mx-auto rounded-tl-[40px] rounded-br-[40px]" />
+                <img src={Person1} alt="" className="w-[85%] lg:w-[90%] mx-auto rounded-tl-[40px] rounded-br-[40px]" />
+                <img src={Person2} alt="" className="w-[85%] lg:w-[90%] mx-auto rounded-tl-[40px] rounded-br-[40px]" />
               </div>
 
               <div className='flex flex-col gap-6 mt-5'>
-                <img src={Person3} alt="" className="w-[85%] w-[90%] mx-auto rounded-tl-[40px] rounded-br-[40px]" />
-                <img src={Person4} alt="" className="w-[85%] w-[90%] mx-auto rounded-tl-[40px] rounded-br-[40px]" />
+                <img src={Person3} alt="" className="w-[85%] lg:w-[90%] mx-auto rounded-tl-[40px] rounded-br-[40px]" />
+                <img src={Person4} alt="" className="w-[85%] lg:w-[90%] mx-auto rounded-tl-[40px] rounded-br-[40px]" />
               </div>
             </div>
 

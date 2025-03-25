@@ -8,10 +8,10 @@ import Filter from "../../../assets/images/filter.svg";
 import Trust from "../../../assets/images/Trust.svg";
 
 const phrases = [
-  "Skilled Professionals.",
-  "Experienced Experts.",
-  "Trusted Specialists.",
-  "Qualified Individuals."
+  " Skilled Professionals.",
+  " Experienced Experts.",
+  " Trusted Specialists.",
+  " Qualified Individuals."
 ];
 
 const Hero = () => {
@@ -28,58 +28,54 @@ const Hero = () => {
   return (
     <>
       <section className='w-full py-5 lg:py-10'>
-        <div className="w-[95%] lg:w-[85%] mx-auto flex flex-col lg:flex-row">
-          <div className='w-full px-3 lg:flex lg:flex-col lg:justify-between'>
-            <div>
-              <div className='w-full flex items-center flex-nowrap'>
-                <div className="w-full lg:w-[80%] flex justify-around lg:justify-between items-center lg:gap-[2%] lg:px-6 py-1 border border-bluecolor rounded-tl-[35px] rounded-br-[35px]">
-                  <img src={Search} alt="" className="hidden lg:block mr-[2%]" width={20} />
+        <div className="lg:w-[85%] xl:w-[80%] mx-auto flex flex-col md:flex-row py-3 md:py-5 lg:py-2">
+          <div className='w-full md:py-5'>
+            <div className='w-full px-4 sm:flex sm:flex-col sm:items-center md:py-5'>
+              <div className='w-full flex items-center flex-nowrap gap-2'>
+                <div className="w-full sm:w-[80%] flex justify-between sm:justify-around items-center sm:gap-[2%] px-4 sm:px-6 py-1 border border-bluecolor rounded-tl-[35px] rounded-br-[35px]">
+                  <img src={Search} alt="" className="hidden sm:block mr-[2%]" width={20} />
                   <input
-                    className="focus:border-transparent outline-none bg-transparent text-center font-Inter w-full text-[12px] py-2"
+                    className="focus:border-transparent outline-none bg-transparent font-Inter w-full text-sm md:text-xl lg:text-lg py-3 md:py-1"
                     type="text"
                     placeholder="What skills are you looking for?"
                   />
                   <img src={Filter} className='pr-2' alt="" width={25} />
                 </div>
-                <a className="bg-bluecolor text-white text-sm text-center font-Inter w-auto lg:w-[15%] py-[12px] px-[20px] lg:py-[15px] lg:px-[18px] rounded-tl-[40px] rounded-br-[40px]"
+                <a className="bg-bluecolor text-white text-sm text-center font-Inter w-auto py-4 px-4 md:py-3 md:px-5 rounded-tl-[40px] rounded-br-[40px]"
                   href="#">Search</a>
               </div>
 
-              <div className="w-full py-6">
-                <h1 className="max-w-full font-Inter text-[38px] lg:text-[40px] font-semibold text-bluecolor leading-[48px] lg:leading-[60px]">
-                  Connecting You with the Best 
-                  <span className="phrase-animation leading-[48px]">{phrases[currentPhraseIndex]}</span>
+
+              <div className="w-full pt-6">
+                <h1 className="max-w-full font-Inter text-pretty sm:text-left text-5xl md:text-4xl lg:text-[40px] font-semibold text-bluecolor leading-[48px] lg:leading-[60px]">
+                  Connecting You with the Best
+                  <span className="leading-[60px] d:pl-2"> Skilled Professionals</span>
                 </h1>
-                <p className="font-Inter text-[16px] text-greycolor py-3">
+
+                <div className="hidden sm:block">
+                  <p className="font-Inter text-greycolor">Your <span className="text-bluecolor font-semibold">Career</span>, Your <span className="text-bluecolor font-semibold">Future</span> - Connected.</p>
+                  <p className="font-Inter text-greycolor">Bringing Job Seekers and Providers Together, Seamlessly.</p>
+                </div>
+
+                <p className="font-Inter text-[16px] text-pretty sm:text-left text-greycolor py-3">
                   Find and hire experts across various fields with ease and trust.
                 </p>
-
               </div>
-            </div>
 
-            <div className="hidden lg:block">
-              <p className="font-Inter pb-[5px]">Trusted By:</p>
-              <img src={Trust} alt="" />
             </div>
-
           </div>
 
-          <div className='w-full lg:w-[65%] flex flex-col justify-between'>
+          <div className='w-full md:w-[70%] flex flex-col justify-between py-8 lg:py-0'>
             <div className="w-full mx-auto flex justify-center">
               <div className='flex flex-col gap-6'>
-                <img src={Person1} alt="" className="w-[85%] lg:w-[90%] mx-auto rounded-tl-[40px] rounded-br-[40px]" />
-                <img src={Person2} alt="" className="w-[85%] lg:w-[90%] mx-auto rounded-tl-[40px] rounded-br-[40px]" />
+                <img src={Person1} alt="" className="w-[85%] md:w-[90%] lg:w-[90%] mx-auto rounded-tl-[40px] rounded-br-[40px]" />
+                <img src={Person2} alt="" className="w-[85%] md:w-[90%] lg:w-[90%] mx-auto rounded-tl-[40px] rounded-br-[40px]" />
               </div>
 
               <div className='flex flex-col gap-6 mt-5'>
-                <img src={Person3} alt="" className="w-[85%] lg:w-[90%] mx-auto rounded-tl-[40px] rounded-br-[40px]" />
-                <img src={Person4} alt="" className="w-[85%] lg:w-[90%] mx-auto rounded-tl-[40px] rounded-br-[40px]" />
+                <img src={Person3} alt="" className="w-[85%] md:w-[90%] lg:w-[90%] mx-auto rounded-tl-[40px] rounded-br-[40px]" />
+                <img src={Person4} alt="" className="w-[85%] md:w-[90%] lg:w-[90%] mx-auto rounded-tl-[40px] rounded-br-[40px]" />
               </div>
-            </div>
-
-            <div className="block lg:hidden">
-              <p className="font-Inter pt-8 pb-5">Trusted By:</p>
-              <img src={Trust} alt="" />
             </div>
 
           </div>

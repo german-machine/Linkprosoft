@@ -4,8 +4,8 @@ const CallToAction = () => {
   return (
     <>
       <section className="w-full border border-t-hrcolor border-b-hrcolor my-8">
-        <div className="w-[95%] w-[80%] mx-auto py-7">
-          <h1 className="text-bluecolor text-center font-Inter font-bold text-[20px] lg:text-[30px] font-Inter font-bold mb-8">
+        <div className="w-[95%] md:w-[80%] mx-auto py-7">
+          <h1 className="text-bluecolor text-center font-Inter font-bold text-[20px] lg:text-[30px] mb-8">
             Find and easily hire the best professional for your project.
           </h1>
 

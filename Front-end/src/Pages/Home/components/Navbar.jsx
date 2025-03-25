@@ -13,9 +13,9 @@ const Navbar = () => {
 
   return (
     <>
-      <header className="bg-white w-[100%] sticky z-[1000] top-0 left-0 right-0">
-        <nav className="w-[90%] lg:w-[90%] py-[15px] mx-auto flex justify-between items-center">
-          <div className="text-4xl font-bold text-bluecolor font-Inter cursor-pointer">
+      <header className="bg-white w-[100%] sticky z-[1000] top-0 left-0 right-0 shadow-md">
+        <nav className="w-[90%] lg:w-[90%] xl:w-[85%] py-4 md:py-10 lg:py-4 mx-auto flex justify-between items-center">
+          <div className="text-4xl md:text-6xl lg:text-4xl font-bold text-bluecolor font-Inter cursor-pointer">
             <Link to='/'>Linkprosoft.</Link>
           </div>
 
@@ -35,7 +35,7 @@ const Navbar = () => {
 
 
           <div className='block lg:hidden' onClick={handleMenu}>
-            {isToggled ? <IoCloseSharp className="text-bluecolor text-2xl" /> : <RiMenu5Fill className='text-bluecolor text-2xl' />}
+            {isToggled ? <IoCloseSharp className="text-bluecolor text-2xl md:text-5xl" /> : <RiMenu5Fill className='text-bluecolor text-2xl md:text-5xl' />}
           </div>
         </nav>
       </header>

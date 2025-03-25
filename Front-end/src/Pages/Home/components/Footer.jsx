@@ -27,8 +27,8 @@ const Footer = () => {
             </div>
           </div>
 
-          <div className="w-[85%] lg:w-full mx-auto flex justify-between lg:justify-center gap-5 py-8 lg:py-6">
-            <div className="flex flex-col lg:flex-row gap-5">
+          <div className="w-[85%] lg:w-full mx-auto flex justify-between sm:justify-center gap-5 py-8 sm:py-6">
+            <div className="flex flex-col sm:flex-row gap-5">
               <div>
                 <h1 className="font-semibold text-white list-disc font-Inter text-[13px] mb-2">Categories</h1>
                 <ul className="text-white pl-6 lg:pl-8 list-disc font-Inter text-[12px] flex flex-col gap-2">
@@ -48,7 +48,7 @@ const Footer = () => {
               </div>
             </div>
 
-            <div className="flex flex-col lg:flex-row gap-5">
+            <div className="flex flex-col sm:flex-row gap-5">
               <div>
                 <h1 className="font-semibold text-white list-disc font-Inter text-[13px] mb-2">Industries</h1>
                 <ul className="text-white pl-6 lg:pl-8 list-disc font-Inter text-[12px] flex flex-col gap-2">

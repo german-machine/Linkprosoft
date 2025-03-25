@@ -61,8 +61,8 @@ const testimonials = [
 ];
 
 const WhatUsersSay = () => {
-  const slides_per_view = window.innerWidth > 768 ? 2.5 : 1.1;
-  const space_between = window.innerWidth > 768 ? -60 : "15";
+  const slides_per_view = window.innerWidth < 640 ? 1.1 : window.innerWidth < 768 ? 2.1 : window.innerWidth < 1024 ? 2.5 : window.innerWidth < 1280 ? 2.5 : 3;
+  const space_between = window.innerWidth < 640  ? 15 : window.innerWidth < 768 ? 15 : window.innerWidth < 1024 ? 15 : window.innerWidth < 1280 ? 15 : 15;
   return (
     <>
       <section className="w-full">
@@ -90,10 +90,10 @@ const WhatUsersSay = () => {
           >
             {testimonials.map((testimonial) => (
               <SwiperSlide key={testimonial.id} className="w-[100%]">
-                <div className="w-full lg:w-[80%] mx-auto bg-orangecolor py-8 rounded-[20px]">
+                <div className="w-full mx-auto bg-orangecolor py-8 rounded-[20px]">
                   <div className="">
                     <div className="py-3 mb-5">
-                      <p className="text-[16px] max-w-[80%] mx-auto text-center font-[400] font-Inter">{testimonial.text}</p>
+                      <p className="text-[16px] max-w-[80%] sm:max-w-[90%] mx-auto text-center font-[400] font-Inter">{testimonial.text}</p>
                     </div>
 
                     <div className="flex justify-center gap-2 items-center">

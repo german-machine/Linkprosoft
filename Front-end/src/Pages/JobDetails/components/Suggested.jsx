@@ -1,6 +1,8 @@
-import  { useState } from 'react';
+import { useState } from 'react';
 import arrow from '../assets/images/arrow.png';
+import { IoIosArrowDown, IoMdSearch } from 'react-icons/io';
 
+const filters = ['Architect',  'Lawyer',  'Painter',  'Electrician',  'Chinese Civil',  'Julius Berger',  'Web Developer' ]
 const Suggested = () => {
   const [openDropdown, setOpenDropdown] = useState(null);
 
@@ -9,48 +11,56 @@ const Suggested = () => {
   };
 
   return (
-    <section className="w-full select-none pt-[30px]">
-      <div className="w-[85%] m-auto relative">
-        <h1 className="font-Inter font-bold pb-2 " >Suggested</h1>
-        <div className="flex align-center justify-between w-[57%] pb-4">
-          {[
-            'Architect',
-            'Lawyer',
-            'Painter',
-            'Electrician',
-            'Chinese Civil',
-            'Julius Berger',
-            'Web Developer',
-            'Caterer',
-          ].map((category, index) => (
-            <div key={index}>
-              <a
-                href="/"
-                className="bg-[#D9D9D9] px-[7px] py-1 font-Inter text-[11px] rounded font-bold"
-              >
-                {category}
-              </a>
-            </div>
-          ))}
+    <section className="w-full select-none ">
+      <div className="w-[90%] mx-auto py-8 lg:py-5">
+
+        <div className='mx-auto flex lg:hidden justify-between items-center bg-[#D9D9D933]'>
+          <input type="text" placeholder='What skills are you looking for?' className='w-[90%] outline-none px-2 bg-transparent' />
+          <div className="w-[15%] mx-auto flex justify-center py-2 md:py-3 px-1 bg-[#03AEFF] rounded-md cursor-pointer">
+            <IoMdSearch className='block text-2xl text-center' />
+          </div>
         </div>
 
-        <div className="flex flex-wrap gap-4">
+        <h1 className="font-Inter font-medium py-3 text-sm " >Suggested</h1>
+
+        <div className="flex flex-col lg:flex-row gap-4">
+          {/* First Row - 4 filters */}
+          <div className="grid grid-cols-4 gap-4">
+            {filters.slice(0, 4).map((item) => (
+              <div key={item} className="bg-[#D9D9D9] font-Inter text-xs font-semibold py-3 lg:px-2 rounded-md text-center">
+                {item}
+              </div>
+            ))}
+          </div>
+
+          {/* Second Row - 3 filters */}
+          <div className="grid grid-cols-3 gap-4">
+            {filters.slice(4).map((item) => (
+              <div key={item} className="bg-[#D9D9D9] font-Inter text-xs font-semibold py-3 lg:px-2 rounded-md text-center">
+                {item}
+              </div>
+            ))}
+          </div>
+        </div>
+
+
+        <div className="flex gap-2 py-5 lg:w-[60%]">
           {/* Dropdown Buttons */}
           {[
-             { label: 'Category', id: 'category' },
-            { label: 'Service Option', id: 'serviceOption' },
+            { label: 'Category', id: 'category' },
+            { label: 'Service', id: 'serviceOption' },
             { label: 'Budget', id: 'budget' },
-            { label: 'Delivery Time', id: 'deliveryTime' },
-            
+            { label: 'Delivery', id: 'deliveryTime' },
+
           ].map((dropdown, index) => (
-            <div key={index} className="relative">
+            <div key={index} className="w-full ">
               <div
-                className="bg-[#0000] px-4 py-1 cursor-pointer flex items-center justify-between font-Inter text-[15px] rounded border border-[#FC8E08] font-bold"
+                className="px- py-1 cursor-pointer flex items-center justify-around font-Inter rounded border border-[#FC8E08] font-bold"
                 onClick={() => toggleDropdown(dropdown.id)}
               >
-                <span>{dropdown.label}</span>
-                <div className="w-[15px] ml-2">
-                  <img src={arrow} alt="Dropdown Arrow" className="w-[70%] h-[7px]" />
+                <span className='text-xs font-normal'>{dropdown.label}</span>
+                <div className="">
+                  <IoIosArrowDown className='text-[10px] text-[#FC8E08]' />
                 </div>
               </div>
 

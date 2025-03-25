@@ -12,12 +12,12 @@ const JobDetails = () => {
    <>
    <Navbar/>
    <Suggested/>
-   <Booking/>
+   {/* <Booking/>
    <Feed/>
    <SideBar/>
    <PrevNext/>
    <Feed/>
-   <Footer/>
+   <Footer/> */}
    </>
   )
 }

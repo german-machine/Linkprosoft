@@ -14,7 +14,6 @@ const JobSearch = () => {
     <Suggested/>
     <Feed/>
     <PrevNext feedDataLength={feedDataLength} />
-    <Feed/>
     <Newsletter />
     <Footer/>
     </>

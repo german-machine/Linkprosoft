@@ -1,5 +1,5 @@
 
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/effect-coverflow";
@@ -14,7 +14,7 @@ const testimonials = [
     name: "John, D",
     position: "CEO, Tech Innovators Inc.",
     image: Person6,
-    text: `"As the CEO of Tech Innovators Inc., finding top-tier talent to join our team is a top priority."`
+    text: `"Linkprosoft impressed us with their professionalism and deep understanding of our industry."`
   },
   {
     id: 2,
@@ -28,41 +28,70 @@ const testimonials = [
     name: "Michael Doe",
     position: "Founder, AI Solutions",
     image: Person6,
-    text: `"Working with Linkprosoft made hiring seamless and efficient. Highly recommend!"`
+    text: `"Linkprosoft impressed us with their professionalism and deep understanding of our industry."`
   },
   {
     id: 4,
     name: "Michael Doe",
     position: "Founder, AI Solutions",
     image: Person6,
-    text: `"Working with Linkprosoft made hiring seamless and efficient. Highly recommend!"`
+    text: `"Linkprosoft impressed us with their professionalism and deep understanding of our industry."`
   },
   {
     id: 5,
     name: "Michael Doe",
     position: "Founder, AI Solutions",
     image: Person6,
-    text: `"Working with Linkprosoft made hiring seamless and efficient. Highly recommend!"`
+    text: `"Linkprosoft impressed us with their professionalism and deep understanding of our industry."`
   },
   {
     id: 6,
     name: "Michael Doe",
     position: "Founder, AI Solutions",
     image: Person6,
-    text: `"Working with Linkprosoft made hiring seamless and efficient. Highly recommend!"`
+    text: `"Linkprosoft impressed us with their professionalism and deep understanding of our industry."`
   },
   {
     id: 7,
     name: "Michael Doe",
     position: "Founder, AI Solutions",
     image: Person6,
-    text: `"Partnering with Linkprosoft has been a transformative experience for our hiring process."`
+    text: `"Linkprosoft impressed us with their professionalism and deep understanding of our industry."`
   },
 ];
 
 const WhatUsersSay = () => {
-  const slides_per_view = window.innerWidth < 640 ? 1.1 : window.innerWidth < 768 ? 2.1 : window.innerWidth < 1024 ? 2.5 : window.innerWidth < 1280 ? 2.5 : 3;
-  const space_between = window.innerWidth < 640  ? 15 : window.innerWidth < 768 ? 15 : window.innerWidth < 1024 ? 15 : window.innerWidth < 1280 ? 15 : 15;
+  const [numSlidesPerView, setNumSlidesPerView] = useState(null);
+  const [numSpaceBetween, setNumSpaceBetween] = useState(null);
+
+  useEffect(() => {
+    function handleScreenChange() {
+      if (window.innerWidth < 640) {
+        setNumSlidesPerView(1.1);
+        setNumSpaceBetween(15)
+      } else if (window.innerWidth < 768) {
+        setNumSlidesPerView(2.1);
+        setNumSpaceBetween(15)
+      } else if (window.innerWidth < 1024) {
+        setNumSlidesPerView(2.5);
+        setNumSpaceBetween(15)
+      } else if (window.innerWidth < 1280) {
+        setNumSlidesPerView(2.5)
+        setNumSpaceBetween(15)
+      } else {
+        setNumSlidesPerView(3)
+        setNumSpaceBetween(15)
+      }
+    }
+
+    handleScreenChange();
+
+    window.addEventListener("resize", handleScreenChange);
+
+    return () => {
+      window.removeEventListener('resize', handleScreenChange);
+    }
+  }, [])
   return (
     <>
       <section className="w-full">
@@ -75,8 +104,8 @@ const WhatUsersSay = () => {
             effect={"coverflow"}
             grabCursor={true}
             centeredSlides={false}
-            slidesPerView={slides_per_view}
-            spaceBetween={space_between}
+            slidesPerView={numSlidesPerView}
+            spaceBetween={numSpaceBetween}
             coverflowEffect={{
               rotate: -10,
               stretch: 0,

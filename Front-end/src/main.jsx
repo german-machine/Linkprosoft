@@ -4,7 +4,6 @@ import './index.css'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import Home from './Pages/Home/Home.jsx'
 import Error from './components/Error.jsx'
-import JobSearch from './Pages/JobSearch/JobSearch.jsx'
 import JobDetails from './Pages/JobDetails/JobDetails.jsx'
 import UserDashboard from './Pages/UserDashboard/UserDashboard.jsx'
 import EmployerDashboard from './Pages/EmployerDashboard/EmployerDashboard.jsx'
@@ -80,10 +79,6 @@ const router = createBrowserRouter([
   {
     path: '/JobDetails',
     element: <JobDetails />,
-  },
-  {
-    path: '/JobSearch',
-    element: <JobSearch />,
   },
   {
     path: '/Onboarding',

@@ -1,34 +1,36 @@
 
+import { TiArrowLeftOutline, TiArrowRightOutline } from "react-icons/ti"
 import next from "../../../assets/images/arrow1.svg"
 import prev from "../../../assets/images/arrow2.svg"
 
-const PrevNext = () => {
+const PrevNext = ({ feedDataLength }) => {
   return (
    <>
-        <div className="white select-none bg-white w-[90%] relative left-[100px] flex items-center  justify-between h-[90px] align-center">
-            <div><p className="font-Inter text-[15px] font-bold">showing 15 results</p></div>
-            <div className=" w-[35%] flex items-center gap-[3%] flex-wrap">
-                <div className="flex align-center justify-center w-[29%] bg-black px-3 py-2 rounded-full">
-                    <img src={next} alt="" />
-                    <p className="font-Inter font-semibold text-[15px] pl-2 text-white ">Previous</p>
+        <section className="w-full">
+            <div className="w-[90%] mx-auto py-4 flex flex-col sm:flex-row justify-between sm:items-center">
+                <div className="w-[60%] sm:w-[35%] lg:w-[20%] rounded-full shadow-md inset-4 border px-2 py-1 flex items-center justify-center mb-3 sm:mb-0">
+                    <p className="font-Inter text-base font-bold text-center"> showing all {feedDataLength} results </p>
                 </div>
+                <div className="flex justify-between items-center gap-[2%] shadow-md inset-4 rounded-full">
+                    <div className="w-[30%] rounded-full px-3 py-1 bg-black flex justify-center items-center gap-2">
+                        <TiArrowLeftOutline className="text-white text-xl " />
+                        <p className="text-white text-md font-Inter">Prev</p>
+                    </div>
 
-                <div className="flex text-center justify-between font-Inter font-bold h-[40px] text-[17px] w-[35%]  bg-[#F4F4F4] rounded-full px-4 text-[rgba(0, 0, 0, 0.67)] ">
-                    <a href="/" className="pt-2">1</a>
-                    <a href="/" className=" bg-[#D9D9D9] rounded-full w-[40px] h-[40px] pt-2 text-center ">2</a>
-                    <a href="/" className="pt-2">3</a>
-                    <a href="/" className="pt-2">4</a>
+                    <div className="flex justify-between items-center gap-4 bg-[#F4F4F4] rounded-full w-full px-3">
+                        <div className="w-full text-base font-bold font-Inter">1</div>
+                        <div className="w-full text-center bg-[#D9D9D9] rounded-full px-3 py-1 text-base font-bold font-Inter">2</div>
+                        <div className="w-full text-base font-bold font-Inter">3</div>
+                        <div className="w-full text-base font-bold font-Inter">4</div>
+                    </div>
 
-                
-                </div>
-
-                <div className="flex align-center justify-center w-[29%] bg-black px-3 py-2 rounded-full">
-
-                    <p className="font-Inter font-semibold text-[15px] pr-2 text-white ">Next</p>
-                    <img src={prev} alt="" />
+                    <div className="w-[30%] rounded-full px-3 py-1 bg-black flex justify-center items-center gap-2">
+                        <TiArrowRightOutline className="text-white text-xl " />
+                        <p className="text-white text-md font-Inter">Next</p>
+                    </div>
                 </div>
             </div>
-        </div>
+        </section>
    </>
   )
 }

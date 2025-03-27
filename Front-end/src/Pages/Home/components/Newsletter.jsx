@@ -6,7 +6,7 @@ const Newsletter = () => {
     <>
 
       <section className='w-full bg-[#267BB4] flex items-center'>
-        <div className="w-[95%] lg:w-[80%] mx-auto flex flex-col items-center py-6">
+        <div className="w-[95%] lg:w-[60%] mx-auto flex flex-col items-center py-6">
           <div className=''>
             <IoIosMail className='text-white text-7xl sm:text-5xl ' />
           </div>

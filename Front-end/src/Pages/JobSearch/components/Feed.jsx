@@ -1,6 +1,5 @@
 import { IoIosArrowDown } from "react-icons/io"
 import { feedData } from "../../../data/feedData2"
-import SideBar from "../../JobDetails/components/SideBar"
 
 const Feed = () => {
     return (
@@ -35,10 +34,6 @@ const Feed = () => {
                                 </div>
                             ))}
                         </div>
-                    </div>
-
-                    <div className="relative">
-                        <SideBar />
                     </div>
 
                 </div>

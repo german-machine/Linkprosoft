@@ -6,8 +6,6 @@ const Feed = () => {
         <>
             <section className="w-full">
                 <div className="w-[90%] mx-auto pb-0">
-
-
                     <div>
                         <div className="w-full flex justify-end mb-1">
                             <div className="flex gap-1">

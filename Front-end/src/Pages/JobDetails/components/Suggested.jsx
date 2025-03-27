@@ -1,13 +1,12 @@
 import { useState } from 'react';
-import arrow from '../assets/images/arrow.png';
-import { IoIosArrowDown, IoMdSearch } from 'react-icons/io';
+import { IoIosArrowDown, IoIosArrowUp, IoMdSearch } from 'react-icons/io';
 
 const filters = ['Architect',  'Lawyer',  'Painter',  'Electrician',  'Chinese Civil',  'Julius Berger',  'Web Developer' ]
 const Suggested = () => {
   const [openDropdown, setOpenDropdown] = useState(null);
 
   const toggleDropdown = (dropdownId) => {
-    setOpenDropdown(openDropdown === dropdownId ? null : dropdownId);
+    setOpenDropdown(() => openDropdown === dropdownId ? null : dropdownId);
   };
 
   return (
@@ -41,10 +40,11 @@ const Suggested = () => {
               </div>
             ))}
           </div>
+          
         </div>
 
 
-        <div className="flex gap-2 py-5 lg:w-[60%]">
+        <div className="flex gap-2 py-5 lg:w-[60%] relative">
           {/* Dropdown Buttons */}
           {[
             { label: 'Category', id: 'category' },
@@ -52,38 +52,39 @@ const Suggested = () => {
             { label: 'Budget', id: 'budget' },
             { label: 'Delivery', id: 'deliveryTime' },
 
-          ].map((dropdown, index) => (
-            <div key={index} className="w-full ">
+          ].map((dropdown) => (
+            <div key={dropdown.id} className="w-full ">
               <div
-                className="px- py-1 cursor-pointer flex items-center justify-around font-Inter rounded border border-[#FC8E08] font-bold"
+                className="px- py-1 cursor-pointer flex items-center justify-around font-Inter relative rounded border border-[#FC8E08] font-bold"
                 onClick={() => toggleDropdown(dropdown.id)}
               >
                 <span className='text-xs font-normal'>{dropdown.label}</span>
                 <div className="">
-                  <IoIosArrowDown className='text-[10px] text-[#FC8E08]' />
+                  {openDropdown === dropdown.id ? <IoIosArrowUp className='text-[10px] text-[#FC8E08]' /> : <IoIosArrowDown className='text-[10px] text-[#FC8E08]' />}
                 </div>
-              </div>
 
               {/* Dropdown Menu */}
               {openDropdown === dropdown.id && (
                 <div
                   id={dropdown.id}
-                  className="rounded border-[1px] border-gray-300 bg-white absolute top-[110%] w-auto shadow-md z-10"
+                  className="rounded border-[1px] border-gray-300 bg-white absolute top-7 right-0 left-0 w-[120%] sm:w-auto shadow-md z-10"
                 >
-                  <div className="cursor-pointer hover:bg-gray-300 px-4 py-2">
+                  <div className="cursor-pointer hover:bg-gray-300 px-4 py-2 text-sm font-semibold border">
                     Option 1
                   </div>
-                  <div className="cursor-pointer hover:bg-gray-300 px-4 py-2">
+                  <div className="cursor-pointer hover:bg-gray-300 px-4 py-2 text-sm font-semibold border">
                     Option 2
                   </div>
-                  <div className="cursor-pointer hover:bg-gray-300 px-4 py-2">
+                  <div className="cursor-pointer hover:bg-gray-300 px-4 py-2 text-sm font-semibold border">
                     Option 3
                   </div>
-                  <div className="cursor-pointer hover:bg-gray-300 px-4 py-2">
+                  <div className="cursor-pointer hover:bg-gray-300 px-4 py-2 text-sm font-semibold border">
                     Option 4
                   </div>
                 </div>
               )}
+              </div>
+
             </div>
           ))}
         </div>

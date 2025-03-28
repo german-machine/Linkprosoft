@@ -1,19 +1,25 @@
 import React from 'react'
-import avatar from "../../../assets/images/avatar.png";
+import profile from '../../JobDetails/assets/images/profile.png'
 import { Link } from 'react-router-dom';
 
-const HeaderBanner = () => {
+const HeaderBanner = ({ bgColor, logoColor, btnColor, btnTextColor }) => {
     return (
-        <header className='w-full bg-[#006FA3]'>
-            <div className="w-[95%] lg:w-[90%] flex justify-between items-center mx-auto py-4 lg:py-2 px-2 lg:px-0">
-                <div>
-                    <h1 className='font-Inter font-[700] text-[24px] md:text-[30px] text-white'>LINKPROSOFT</h1>
+        <header className={`w-full bg-[${bgColor}] `}>
+            <nav className="w-[90%] mx-auto py-5 flex items-center justify-between">
+                <div className={`text-3xl md:text-4xl lg:text-4xl font-bold text-[${logoColor}] font-Inter cursor-pointer`}>
+                    <Link to='/'>Linkprosoft.</Link>
                 </div>
-                <div className="flex justify-around items-center w-auto md:w-[20%]">
-                    <Link className='lg:bg-transparent bg-white px-4 py-1 md:py-2 md:px-6 rounded-lg text-[#0A66C2] lg:text-white text-[16px] md:text-[20px] font-Inter font-[700]'>Sign In</Link>
-                      <img src={avatar} alt="" className='hidden lg:block cursor-pointer' />
+
+                <div className='flex items-center justify-end gap-4'>
+                    <div className={`text-center bg-[${btnColor}] px-4 py-2 rounded-md`}>
+                        <Link href="/" className={`text-[${btnTextColor}] font-Inter font-bold text-base `}>Sign In</Link>
+                    </div>
+                    <div className='w-[15%] lg:w-[12%] hidden md:block'>
+                        <img src={profile} alt="" className='rounded-full' />
+                    </div>
                 </div>
-            </div>
+            </nav>
+            <hr className={`bg-[${btnColor}] py-[2px]`}/>
         </header>
     )
 }

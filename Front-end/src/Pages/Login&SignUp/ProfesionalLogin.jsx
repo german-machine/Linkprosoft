@@ -15,22 +15,20 @@ const ProfesionalLogin = () => {
     return (
         <>
             <HeaderBanner
-                showSignInButton={false}
-                border='none'
-                bgColor='#000000'
+                bgColor='#006FA3'
                 logoColor='#ffffff'
-                btnColor='#006FA3'
-                btnTextColor='#ffffff'
+                btnColor='#ffffff'
+                btnTextColor='#006FA3'
             />
 
             <section className="w-full lg:bg-[#F6F6F6]">
                 <div className="w-[85%] lg:w-[80%] mx-auto flex justify-between items-center py-10 lg:py-5 ">
-                    <div className='w-full mx-auto items-center hidden lg:block py-5 px-4'>
-                        <img src={OurLogo} alt="" className='w-[70%] mx-auto' />
+                    <div className='w-[50%] mx-auto hidden lg:block px-4 lg:mr-[10%]'>
+                        <img src={OurLogo} alt="" className='w-full mx-auto' />
                         <p className='w-full opacity-50 text-center mt-3'>Linkprosoft bridging the gap between employers and employees</p>
                     </div>
 
-                    <div className='w-full lg:w-[100%] xl:w-[70%] mx-auto bg-transparent lg:bg-white rounded-none lg:rounded-lg shadow-none lg:shadow-lg lg:p-3 lg:px-16 lg:py-10'>
+                    <div className='w-full lg:w-[70%] xl:w-[50%] mx-auto bg-transparent lg:bg-white rounded-none lg:rounded-lg shadow-none lg:shadow-lg lg:p-3 lg:px-16 lg:py-10'>
                         <h2 className='text-[36px] font-Inter font-[800] leading-[40px] mb-3 md:text-center lg:text-left inline-block md:w-full md:mb-3 xl:max-w-[85%]'>Log in, <br /> start <span className='text-[#4093BA]'>advertising</span> and get <span className='text-[#4093BA]'>working</span></h2>
 
                         <form action="">

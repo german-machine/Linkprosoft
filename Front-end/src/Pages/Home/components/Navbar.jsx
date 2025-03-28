@@ -28,8 +28,8 @@ const Navbar = () => {
             </div>
 
             <div className="flex gap-3 text-[15px]">
-              <Link to="/signup" className="bg-bluecolor lg:hover:bg-transparent border hover:border-bluecolor text-white hover:text-bluecolor font-Inter py-[10px] px-[25px] rounded-tl-[40px] rounded-br-[40px]">Sign Up</Link>
-              <Link to="/Login" className="border text-white lg:text-bluecolor border-white lg:border-bluecolor lg:hover:bg-bluecolor hover:text-white font-Inter py-[10px] px-[25px] rounded-tl-[40px] rounded-br-[40px]">Login</Link>
+              <Link to="/signup-as" className="bg-bluecolor lg:hover:bg-transparent border hover:border-bluecolor text-white hover:text-bluecolor font-Inter py-[10px] px-[25px] rounded-tl-[40px] rounded-br-[40px]">Sign Up</Link>
+              <Link to="/login" className="border text-white lg:text-bluecolor border-white lg:border-bluecolor lg:hover:bg-bluecolor hover:text-white font-Inter py-[10px] px-[25px] rounded-tl-[40px] rounded-br-[40px]">Login</Link>
             </div>
           </div>
 

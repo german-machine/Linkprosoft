@@ -8,7 +8,14 @@ import { Link } from 'react-router-dom'
 const EmployerLogin = () => {
   return (
     <>
-      <HeaderBanner showSignInButton={false} navColor='bg-[#000000]' border='none' />
+      <HeaderBanner
+        showSignInButton={false}
+        border='none'
+        bgColor='#000000'
+        logoColor='#ffffff' 
+        btnColor='#006FA3' 
+        btnTextColor='#ffffff'
+      />
 
       <section className="w-full lg:bg-[#F6F6F6]">
         <div className="w-[85%] lg:w-[80%] mx-auto flex justify-between items-center py-10 lg:py-5 ">
@@ -52,7 +59,7 @@ const EmployerLogin = () => {
 
                 <Link className='bg-[#F6F6F6] flex justify-center items-center rounded-md py-3 px-1 gap-2' style={{ width: "clamp(70%, 90vw, 100%)" }}
                 >
-                  <FcGoogle className='text-white'/>
+                  <FcGoogle className='text-white' />
                   <p className='font-[600] font-Inter text-[15px] text-black'>Continue with Google</p>
                 </Link>
               </div>

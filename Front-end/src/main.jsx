@@ -22,7 +22,7 @@ import Pending from './Pages/UserDashboard/Routes/Pending.jsx'
 import Completed from './Pages/UserDashboard/Routes/Completed.jsx'
 import Rejected from './Pages/UserDashboard/Routes/Rejected.jsx'
 import Onboarding from './Pages/OnBoarding/Onboarding.jsx'
-import SignUp from './Pages/Login&SignUp/SignUp.jsx'
+import SignUpAs from './Pages/Login&SignUp/SignUpAs.jsx'
 import Login from './Pages/Login&SignUp/EmployerLogin.jsx'
 import EmployerSignup from './Pages/Login&SignUp/EmployerSignUp.jsx'
 import ProfesionalLogin from './Pages/Login&SignUp/ProfesionalLogin.jsx'
@@ -85,8 +85,8 @@ const router = createBrowserRouter([
     element: <Onboarding />,
   },
   {
-    path: '/SignUp',
-    element: <SignUp/>,
+    path: '/SignUp-As',
+    element: <SignUpAs />,
   },
   {
     path: '/EmployerSignUp',
@@ -105,18 +105,6 @@ const router = createBrowserRouter([
     element: <ProfessionalSignUp/>,
   },
   
-  
-
-  
-  // {
-  //   path: '/signup',
-  //   element: <SignUp />,
-  //   children: [
-  //     { path: 'professional', element: <ProfessionalSignUp /> },
-  //     { path: 'employer', element: <EmployerSignUp /> },
-  //     { path: 'login', element: <Login /> },
-  //   ],
-  // },
 ])
 
 createRoot(document.getElementById('root')).render(

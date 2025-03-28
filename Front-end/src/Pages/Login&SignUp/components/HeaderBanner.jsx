@@ -11,7 +11,7 @@ const HeaderBanner = ({ bgColor, logoColor, btnColor, btnTextColor }) => {
                 </div>
 
                 <div className='flex items-center justify-end gap-4'>
-                    <div className={`text-center bg-[${btnColor}] px-4 py-2 rounded-md`}>
+                    <div className={`text-center bg-[${btnColor}] px-6 py-3 rounded-md`}>
                         <Link href="/" className={`text-[${btnTextColor}] font-Inter font-bold text-base `}>Sign In</Link>
                     </div>
                     <div className='w-[15%] lg:w-[12%] hidden md:block'>
@@ -19,7 +19,7 @@ const HeaderBanner = ({ bgColor, logoColor, btnColor, btnTextColor }) => {
                     </div>
                 </div>
             </nav>
-            <hr className={`bg-[${btnColor}] py-[2px]`}/>
+            <hr className={`bg-[${btnColor}] py-[1px]`}/>
         </header>
     )
 }

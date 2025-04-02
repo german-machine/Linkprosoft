@@ -16,7 +16,7 @@ const Navbar = () => {
       <header className="bg-white w-[100%] sticky z-[1000] top-0 left-0 right-0 shadow-md">
         <nav className="w-[90%] lg:w-[90%] xl:w-[85%] py-4 md:py-10 lg:py-4 mx-auto flex justify-between items-center">
           <div className="text-4xl md:text-6xl lg:text-4xl font-bold text-bluecolor font-Inter cursor-pointer">
-            <Link to='/'>Linkprosoft.</Link>
+            <Link to='/'>Linkprosoft</Link>
           </div>
 
           <div className={`${isToggled ? 'top-[100%]' : 'top-[-1000%] z-[1000]'} left-0 flex flex-col lg:flex-row w-full lg:top-0 py-6 lg:py-0 duration-[1s] bg-bluecolor lg:bg-transparent absolute lg:relative items-center justify-between font-Inter text-greycolor text-[17px] `}>

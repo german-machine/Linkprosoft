@@ -8,7 +8,7 @@ const HeaderBanner = ({ bgColor, logoColor, btnColor, btnTextColor }) => {
             <nav className="w-full">
                 <div className="w-[90%] mx-auto py-4 lg:py-3 flex items-center justify-between">
                     <div className={`text-3xl md:text-4xl lg:text-4xl font-bold font-Inter cursor-pointer`} style={{ color: logoColor}}>
-                        <Link to='/'>Linkprosoft.</Link>
+                        <Link to='/'>Linkprosoft</Link>
                     </div>
 
                     <div className='flex items-center justify-end gap-4'>

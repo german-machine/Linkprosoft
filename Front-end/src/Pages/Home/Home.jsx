@@ -13,7 +13,7 @@ import Copyright from "../../components/Copyright"
 const Home = () => {
   return (
     <>
-    
+
     <Navbar />
     <Hero />
     <PopularSkills />

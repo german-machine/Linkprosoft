@@ -16,7 +16,7 @@ const Navbar = () => {
     <nav className='w-full shadow-md'>
       <div className="w-[95%] mx-auto flex items-center justify-between py-4 px-4 gap-[2%]">
         <div className="w-[20%] text-4xl md:text-6xl lg:text-3xl font-bold text-bluecolor font-Inter cursor-pointer">
-          <Link to='/'>Linkprosoft.</Link>
+          <Link to='/'>Linkprosoft</Link>
         </div>
 
         <div className='w-[40%] mx-auto hidden lg:flex justify-between items-center bg-[#D9D9D933]'>

@@ -1,19 +1,23 @@
-import React from 'react'
+import React, {useState} from 'react'
 import HeaderBanner from './components/HeaderBanner'
 import SignupForm from './components/SignUpForm'
 import OurLogo from '../../assets/images/linkprosoft-logo.png'
 import { Link } from 'react-router-dom'
 
 const EmployerSignup = () => {
+
+    const [acceptTerms, setAcceptTerms] = useState(false)
+
     const handleSubmit = (e) => {
         e.PreventDefault()
+        alert(acceptTerms)
     }
     return (
         <>
             <HeaderBanner showSignInButton={false} navColor='bg-[#000000]' border='none' />
-            <div className='min-h-screen flex items-center justify-center bg-gray-100'>
-                <div className='container mx-auto flex items-center justify-center space-x-8 px-4'>
-                    <div className='w-1/2 flex flex-col items-center justify-center'>
+            <div className='h-full lg:min-h-screen flex items-center justify-center lg:bg-gray-100'>
+                <div className='container mx-auto flex items-center justify-between'>
+                    <div className='lg:w-1/2  lg:flex flex-col items-center justify-center hidden'>
                         <img
                             src={OurLogo}
                             alt="Logo"
@@ -26,8 +30,8 @@ const EmployerSignup = () => {
                             </Link>
                         </button>
                     </div>
-                    <form onSubmit={handleSubmit} className='relative top-[-20px]'>
-                        <SignupForm />
+                    <form onSubmit={handleSubmit} className='lg:relative top-[-20px]  lg:w-1/2'>
+                        <SignupForm setAcceptTerms={setAcceptTerms} acceptTerms={acceptTerms}/>
                     </form>
                 </div>
             </div>

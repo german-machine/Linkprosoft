@@ -9,7 +9,7 @@ export const InputComponent = ({ id, label, type }) => {
         setInputValue(e.target.value)
     }
     return (
-        <div className=' '>
+        <div className='w-full items-center'>
             <label htmlFor={id} className='block text-gray-700 font-medium mb-1'>{label}</label>
             <input type={type} id={id} onChange={handleChange} value={inputValue} className='w-full px-2 py-1.5 border-none rounded-md focus:outline-none focus:ring-2 focus:ring-[#0A66C2] bg-[#f6f6f6]' />
         </div>
@@ -51,33 +51,37 @@ export const SignupWith = () => {
         <>
 
             <div className="mt-6">
-                <div className="flex space-x-2 gap-1 font-Inter">
+                <div className="flex font-Inter items-center justify-between mb-4">
                     <button
                         type="button"
-                        className=" bg-[#006FA3] text-white rounded-md hover:bg-blue-800 text-sm font-semibold transition py-3 px-2"
-                    >
-                        <div className='flex items-center justify-center'>
-                            <img
-                                src={linkedin}
-                                alt="LinkedIn"
-                                className="w-5 h-4 mr-2"
-                            />
-                            Continue with LinkedIn
+                        className="w-[48%] bg-[#006FA3] text-white rounded-md hover:bg-blue-800 text-sm font-semibold 
+                            transition py-4 px-2"
+                        >
+                        <div className='flex items-center gap-2 justify-center'>
+                            <span className='w-5 h-5'>
+                                <img
+                                    src={linkedin}
+                                    alt="LinkedIn"
+                                    className="w-full"
+                                />
+                            </span>
+                            <span className='text-xs sm:text-sm lg:text-base'>Continue with LinkedIn</span>
                         </div>
 
 
                     </button>
                     <button
                         type="button"
-                        className=" bg-[#f4eeee] text-black rounded-md hover:bg-[#f4eeee] transition py-3 px-2"
-                    >
-                        <div className='flex justify-center items-center'>
-                            <img
+                        className="w-[48%] bg-[#f4eeee] text-black rounded-md hover:bg-[#f4eeee] transition py-3 px-2"
+                        >
+                        <div className='flex items-center gap-2 justify-center'>
+                            <span className='w-7 h-7'><img
                                 src={googleImage}
                                 alt="Google"
-                                className="w-7 h-7"
-                            />
-                            Continue with Google
+                                className="w-full"
+                                />
+                            </span>
+                            <span className='text-xs sm:text-sm lg:text-lg'>Continue with Google</span>
                         </div>
 
                     </button>
@@ -88,7 +92,8 @@ export const SignupWith = () => {
 }
 
 // Terms and Conditions
-export const TermsAndConditions = ({ ifLoggedIn = true }) => {
+export const TermsAndConditions = ({ ifLoggedIn = true}) => {
+
     return (
 
         <>
@@ -97,6 +102,7 @@ export const TermsAndConditions = ({ ifLoggedIn = true }) => {
                     id="terms"
                     type="checkbox"
                     className="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded"
+
                 />
                 {ifLoggedIn ? (
 

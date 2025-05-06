@@ -6,12 +6,13 @@ import { Link } from 'react-router-dom'
 
 const EmployerSignup = () => {
 
-    const [acceptTerms, setAcceptTerms] = useState(false)
+    // const [acceptTerms, setAcceptTerms] = useState(false)
 
-    const handleSubmit = (e) => {
-        e.PreventDefault()
-        alert(acceptTerms)
-    }
+    // const handleSubmit = (e) => {
+    //     e.PreventDefault()
+    //     alert(acceptTerms)
+
+    // }
     return (
         <>
             <HeaderBanner showSignInButton={false} navColor='bg-[#000000]' border='none' />
@@ -30,9 +31,9 @@ const EmployerSignup = () => {
                             </Link>
                         </button>
                     </div>
-                    <form onSubmit={handleSubmit} className='lg:relative top-[-20px]  lg:w-1/2'>
-                        <SignupForm setAcceptTerms={setAcceptTerms} acceptTerms={acceptTerms}/>
-                    </form>
+                    <div className='lg:relative top-[-20px]  lg:w-1/2'>
+                        <SignupForm />
+                    </div>
                 </div>
             </div>
         </>

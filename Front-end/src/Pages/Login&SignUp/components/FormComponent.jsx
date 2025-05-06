@@ -1,13 +1,14 @@
+/* eslint-disable react/prop-types */
 import React, { useState } from 'react'
 import linkedin from "../../../assets/images/Linkden.png"
 import googleImage from "../../../assets/images/google-logo.png"
 
 // input fields
-export const InputComponent = ({ id, label, type }) => {
-    const [inputValue, setInputValue] = useState("")
-    const handleChange = (e) => {
-        setInputValue(e.target.value)
-    }
+export const InputComponent = ({ id, label, type, handleChange, inputValue }) => {
+    // const [inputValue, setInputValue] = useState("")
+    // // const handleChange = (e) => {
+    // //     setInputValue(e.target.value)
+    // // }
     return (
         <div className='w-full items-center'>
             <label htmlFor={id} className='block text-gray-700 font-medium mb-1'>{label}</label>
@@ -92,7 +93,7 @@ export const SignupWith = () => {
 }
 
 // Terms and Conditions
-export const TermsAndConditions = ({ ifLoggedIn = true}) => {
+export const TermsAndConditions = ({ ifLoggedIn = true, checked, setChecked}) => {
 
     return (
 
@@ -102,7 +103,8 @@ export const TermsAndConditions = ({ ifLoggedIn = true}) => {
                     id="terms"
                     type="checkbox"
                     className="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded"
-
+                    checked={checked}
+                    onChange={setChecked}
                 />
                 {ifLoggedIn ? (
 

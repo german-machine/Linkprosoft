@@ -37,8 +37,6 @@ const EmployerLogin = () => {
       alert("Form Submitted")
       setEmail("")
       setPassword("")
-    }else{
-      alert("An error Occured please try again")
     }
 }
   
@@ -64,11 +62,25 @@ const EmployerLogin = () => {
             <h2 className='text-[36px] font-Inter font-[800] leading-[40px] mb-3 md:text-center lg:text-left inline-block md:w-full md:mb-3 xl:max-w-[85%]'>Log in, <br /> start <span className='text-[#4093BA]'>advertising</span> and get <span className='text-[#4093BA]'>working</span></h2>
 
             <form action="" onSubmit={handleSubmit}>
-              <label htmlFor="" className='block text-gray-700 font-medium mb-1 md:text-[22px] lg:text-[16px]'>Email</label>
-              <input type="email" name="" id="" onChange={(e) => setEmail(e.target.value)} value={email} className='w-full px-2 py-1.5 mb-3 border-none rounded-md focus:outline-none focus:ring-2 focus:ring-[#0A66C2] bg-[#f6f6f6]' />
+              <div className='relative'>
+                <p className='text-sm text-red-600 absolute left-5 top-9'>{error.email}</p>
+                <label htmlFor="" className='block text-gray-700 font-medium mb-1 md:text-[22px] lg:text-[16px]'>Email</label>
+                <input type="email" name="" id=""
+                  onChange={(e) => setEmail(e.target.value)}
+                  onFocus={() =>setError({...error, email: null})}
+                  value={email}
+                  className='w-full px-2 py-1.5 mb-3 border-none rounded-md focus:outline-none focus:ring-2 focus:ring-[#0A66C2] bg-[#f6f6f6]'
+                />
+              </div>
 
-              <label htmlFor="" className='block text-gray-700 font-medium mb-1 md:text-[22px] lg:text-[16px]'>Password</label>
-              <input type="password" name="" onChange={(e) => setPassword(e.target.value)} value={password} id="" className='w-full px-2 py-1.5 border-none rounded-md focus:outline-none focus:ring-2 focus:ring-[#0A66C2] bg-[#f6f6f6]' />
+              <div className='relative'>
+                <p className='text-sm text-red-600 absolute left-5 top-9'>{error.password}</p>
+                <label htmlFor="" className='block text-gray-700 font-medium mb-1 md:text-[22px] lg:text-[16px]'>Password</label>
+                <input type="password" name=""
+                  onChange={(e) => setPassword(e.target.value)}
+                  onFocus={() =>setError({...error, password: null})}
+                  value={password} id="" className='w-full px-2 py-1.5 border-none rounded-md focus:outline-none focus:ring-2 focus:ring-[#0A66C2] bg-[#f6f6f6]' />
+              </div>
 
               <div className="flex items-center gap-2 mt-3">
                 <input type="checkbox" name="" id="" />

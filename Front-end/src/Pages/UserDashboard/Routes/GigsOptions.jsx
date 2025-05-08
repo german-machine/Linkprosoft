@@ -1,15 +1,12 @@
 import React from 'react'
 import { Outlet } from 'react-router-dom'
-import GigsOptionsLinks from '../components/GigsOptionsLinks'
-import GigsOptionsBanner from '../components/GigsOptionsBanner'
 
 const GigsOptions = () => {
   return (
-    <>
-    <GigsOptionsBanner />
-      <GigsOptionsLinks />
+    <section className='w-full lg:w-[70%] xl:w-[75%]'>
+
       <Outlet />
-    </>
+    </section>
   )
 }
 

@@ -22,9 +22,9 @@ const Navbar = () => {
           <div className={`${isToggled ? 'top-[100%]' : 'top-[-1000%] z-[1000]'} left-0 flex flex-col lg:flex-row w-full lg:top-0 py-6 lg:py-0 duration-[1s] bg-bluecolor lg:bg-transparent absolute lg:relative items-center justify-between font-Inter text-greycolor text-[17px] `}>
             <div className={`flex flex-col lg:flex-row justify-around items-center gap-4 lg:gap-0 mb-10 lg:mb-0 w-[80%] lg:w-[50%] xl:w-[40%] mx-auto text-white lg:text-black`}>
               <Link to="/">Home</Link>
-              <Link to="/UserDashboard">About</Link>
-              <Link to="/JobDetails">How It Works</Link>
-              <Link to="/EmployerDashboard">Contact Us</Link>
+              <Link to="/user-dashboard">About</Link>
+              <Link to="/job-details">How It Works</Link>
+              <Link to="/employer-dashboard">Contact Us</Link>
             </div>
 
             <div className="flex gap-3 text-[15px]">

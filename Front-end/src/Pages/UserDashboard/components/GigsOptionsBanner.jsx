@@ -2,20 +2,19 @@ import React from 'react'
 
 const Banner = () => {
   return (
-    <>
-      <section className='bg-[#03AEFF] relative py-16 px-10 rounded-md '>
-        <div className='relative left-3 font-Inter top-[-8px] font-bold text-white text-2xl leading-tight'>
-          <h2>Linkprosoft the bridge to linking up skilled <br /> professionals to paying clients</h2>
+    <section className='w-[90%] lg:w-full mx-auto rounded-2xl lg:rounded-none mt-10 lg:mt-0'>
+      <div className='w-full lg:w-[90%] mx-auto bg-[#03AEFF] h-[15rem] py-5 px-4 lg:rounded-md flex flex-col justify-around items-center '>
+        <div className=''>
+          <h2 className='font-Inter font-semibold text-white text-2xl leading-tight'>Linkprosoft the bridge to linking up skilled <br /> professionals to paying clients</h2>
         </div>
 
-        <div className='flex absolute bottom-3 left-96 gap-2'>
-          <div className='bg-white w-[15px] h-[15px] rounded-full'></div>
-          <div className='bg-white w-[15px] h-[15px] rounded-full'></div>
-          <div className='bg-white w-[15px] h-[15px] rounded-full'></div>
+        <div className='flex  gap-2'>
+          <div className='bg-white w-[.6rem] h-[.6rem] rounded-full'></div>
+          <div className='bg-white w-[.6rem] h-[.6rem] rounded-full'></div>
+          <div className='bg-white w-[.6rem] h-[.6rem] rounded-full'></div>
         </div>
-      </section>
-
-</>
+      </div>
+    </section>
   )
 }
 

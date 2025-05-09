@@ -2,7 +2,7 @@ import React from 'react'
 
 const Certifications = () => {
   return (
-    <div>Certifications</div>
+    <section className='min-h-screen'>Certifications</section>
   )
 }
 

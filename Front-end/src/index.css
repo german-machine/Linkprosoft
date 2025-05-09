@@ -31,3 +31,35 @@ html{
     scrollbar-width: none;  
   }
   
+
+  .styled-range {
+    -webkit-appearance: none;
+    width: 70%;
+    height: 6px;
+    border-radius: 5px;
+    background: linear-gradient(to right, #006FA3 50%, #ccc 50%);
+    outline: none;
+    transition: background 0.3s ease;
+  }
+  
+  /* Thumb */
+  .styled-range::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    height: 10px;
+    width: 10px;
+    background: #006FA3;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  
+  .styled-range::-moz-range-thumb {
+    height: 20px;
+    width: 20px;
+    background: #006FA3;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  
+  
+  

@@ -1,49 +1,55 @@
-import React from 'react'
-import { Link, useLocation } from 'react-router-dom'
+import React, { useEffect, useState } from 'react'
+import { IoNotifications } from 'react-icons/io5'
+import { Link, Outlet, useLocation } from 'react-router-dom'
 
 const GigsOptionsLinks = () => {
-  const location = useLocation()
+  const location = useLocation();
+    const [isActive, setIsActive] = useState('recommended');
+  
+  useEffect(() => {
+    const path = location.pathname.split('/')[3];
+    setIsActive(path || "recommended");
+  }, [location.pathname])
 
   return (
-    <>
-      <section className='w-full mt-5'>
-        <div className='flex gap-14 font-Inter'>
+      <section className='w-full mt-5 '>
+        <div className='w-full lg:w-[90%] mx-auto border-b-[5px] border-[#F6F6F6] flex flex-1 justify-around'>
           <Link 
-            to="recommended" 
+            to="recommended"
             className={`transition-colors duration-300 ${
-              location.pathname.endsWith('recommended') || location.pathname === '/UserDashboard/gigs-options' ? 'text-black' : 'text-[#00000099]'
-            }`}
+              isActive === "recommended" ? 'text-black' : 'text-[#00000099]'
+            } font-semibold text-xs lg:text-base`}
           >
             Recommended
           </Link>
           <Link 
-            to="recent-viewed" 
+            to="recent-viewed"
             className={`transition-colors duration-300 ${
-              location.pathname.endsWith('recent-viewed') ? 'text-black' : 'text-[#00000099]'
-            }`}
+              isActive === "recent-viewed" ? 'text-black' : 'text-[#00000099]'
+            } font-semibold text-xs lg:text-base`}
           >
             Recent Viewed Gigs
           </Link>
           <Link 
             to="saved-gigs" 
             className={`transition-colors duration-300 ${
-              location.pathname.endsWith('saved-gigs') ? 'text-black' : 'text-[#00000099]'
-            }`}
+              isActive === "saved-gigs" ? 'text-black' : 'text-[#00000099]'
+            } font-semibold text-xs lg:text-base`}
           >
             Saved Gigs
           </Link>
           <Link 
             to="notifications" 
             className={`transition-colors duration-300 ${
-              location.pathname.endsWith('notifications') ? 'text-black' : 'text-[#00000099]'
-            }`}
+              isActive === "notifications" ? 'text-black' : 'text-[#00000099]'
+            } font-semibold flex gap-1 items-center text-xs lg:text-base`}
           >
-            Notifications
+            Notifications <IoNotifications className='hidden lg:block'/>
           </Link>
         </div>
-        <div className='w-full h-[5px] bg-[#F6F6F6]'></div>
+
+        <Outlet />
       </section>
-    </>
   )
 }
 

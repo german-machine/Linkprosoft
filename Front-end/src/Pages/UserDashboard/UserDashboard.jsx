@@ -1,23 +1,28 @@
-import React from 'react'
-import { Outlet } from 'react-router-dom'
+import React, { useState } from 'react'
+import { Outlet, useLocation } from 'react-router-dom'
 import Navbar from './components/Navbar'
 import Sidebar from './components/SideBar'
+import Main from './components/Main'
 
 const UserDashboard = () => {
+  const location = useLocation();
+  const [isToggled, setIsToggled] = useState(false);
+  const [isActive, setIsActive] = useState("dashboard");
+
+  
+  const handleMenu = () => {
+    setIsToggled(prevState => !prevState);
+  }
+
   return (
     <>
-      <section className='fixed w-full top-0 z-10'>
-        <Navbar />
-      </section>
-
-      <section className='w-full flex z-2 gap-2'>
-        <div className='fixed top-28 overflow-y-auto scrollbar-hide w-[25%]'>
-          <Sidebar />
+      <Navbar handleMenu={handleMenu} isToggled={isToggled} />
+      <div className="w-full py-0 lg:py-2 xl:py-8 relative overflow-x-hidden">
+        <div className='w-full flex justify-end lg:justify-normal'>
+          <Sidebar isToggled={isToggled} setIsToggled={setIsToggled} location={location} isActive={isActive} setIsActive={setIsActive} />
+          <Main isActive={isActive} />
         </div>
-        <div className='ml-[30%] mt-28 h-[calc(100vh-4rem)] w-[67%]  px-2'>
-          <Outlet />
-        </div>
-      </section>
+      </div>
     </>
   )
 }

@@ -1,52 +1,77 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import worker from '../assets/worker.svg'
 import { Link } from 'react-router-dom'
-import SidenavLinks from '../components/SideNavLinks'
 import '../components/Scroll.css'
-import { IoSettingsSharp } from "react-icons/io5";
+import { IoIosSettings } from 'react-icons/io'
 
 
-const SideBar = () => {
+const SideBar = ({ isToggled, location, isActive, setIsActive, setIsToggled }) => {
+    const [rangeValue, setRangeValue] = useState(70);
+
+    useEffect(() => {
+        const percent = (rangeValue / 100) * 100;
+        const slider = document.querySelector(".styled-range");
+        slider.style.background = `linear-gradient(to right, #006FA3 ${percent}%, #ccc ${percent}%)`;
+      }, [rangeValue]);
+
+
+    useEffect(() => {
+        // Sync the state with the URL path on component mount
+        const path = location.pathname.split("/")[2]; // Get the current path
+        setIsActive(path || "dashboard"); // Default to 'dashboard'
+    }, [location.pathname]);
+
+
+
   return (
     <>
-    <section className='w-full bg-white select-none h-[calc(100vh-8rem)] pb-11 scrollbar-hide top-0 overflow-y-auto'>
-        <div className='w-[80%] m-auto '>
-                <div className='bg-[#F6F6F6] flex flex-col items-center rounded-lg m-auto w-[100%] py-2'>
-                   <div className='flex ml-9 items-center gap-4 w-[90%]'>
-                   <div className='w-[20%]'>
-                        <img src={worker} alt="" />
+    
+    {<aside className={`${isToggled ? "right-0 duration-1000" : "-right-[100%] lg:right-0 duration-1000"} absolute lg:fixed lg:left-0 lg:bottom0 w-[80%] md:w-[60%] lg:w-[30%] xl:w-[25%] bg-white lg:bg-transparent drop-shadow-lg lg:drop-shadow-none rounded-md lg:rounded-none z-[999] overflow-x-hidden`}>
+        <div className="w-[90%] mx-auto flex flex-col gap-5 py-5 lg:py-0">
+            <div className='py-3 bg-[#F6F6F6] rounded-xl'>
+                <div className='flex justify- gap-4 items-center px-4'>
+                    <div>
+                        <img src={worker} alt=""  className='lg:w-[60%]' />
                     </div>
-                    <div className='leading-tight'>
-                        <h1 className='font-Inter font-bold'>John Joe</h1>
-                        <p className='font-Inter text-[#798387] text-sm'>Plumber, Welder</p>
+                    <div>
+                        <h2 className='font-Inter font-bold text-xs lg:text-base'>John Doe</h2>
+                        <p className='font-Inter font-normal text-xs lg:text-base'>Plumber, Welder</p>
                     </div>
-                   </div>
-
-                   <div className='w-[70%] pt-2'>
-                    <Link className='font-Inter text-[#006FA3] text-[13px] decoration-underline'>Complete your profile</Link>
-                    <div className='flex items-center justify-between'>
-                        <div className='w-[70%] bg-white h-2 rounded'>
-                            <div className='w-[60%] bg-[#006FA3] h-2 rounded'></div>
-                        </div>
-
-                            <h2 className='font-Inter ffont-bold text-sm'>70%</h2>
+                </div>
+                <div className='px-4 mt-4'>
+                    <Link className='underline text-xs lg:text-base font-Inter font-normal text-[#006FA3]'>Complete your profile</Link>
+                    <div className='flex gap-3 items-center'>
+                        <input 
+                            type="range"  
+                            name="" 
+                            id="" 
+                            value={rangeValue} 
+                            min="0" 
+                            max="100" 
+                            className='styled-range'
+                            onChange={(e) => setRangeValue(e.target.value)}
+                        />
+                        <output>{rangeValue}%</output>
                     </div>
-                   </div>
                 </div>
+            </div>
+            
+            <div className='flex flex-col gap-3 flex-1'>
+                <Link onClick={() => setIsToggled(!isToggled)} to="dashboard" className={`${isActive === "dashboard" ? "bg-black text-white" : "bg-[#F6F6F6] text-black"} rounded-md px-2 py-2 text-center w-full text-xs lg:text-base font-semibold`}>Dashboard</Link>
+                <Link onClick={() => setIsToggled(!isToggled)} to="gigs-options" className={`${isActive === "gigs-options" ? "bg-black text-white" : "bg-[#F6F6F6] text-black"} rounded-md px-2 py-2 text-center w-full text-xs lg:text-base font-semibold`}>Gigs Options</Link>
+                <Link onClick={() => setIsToggled(!isToggled)} to="messages" className={`${isActive === "messages" ? "bg-black text-white" : "bg-[#F6F6F6] text-black"} rounded-md px-2 py-2 text-center w-full text-xs lg:text-base font-semibold`}>Messages</Link>
+                <Link onClick={() => setIsToggled(!isToggled)} to="projects" className={`${isActive === "projects" ? "bg-black text-white" : "bg-[#F6F6F6] text-black"} rounded-md px-2 py-2 text-center w-full text-xs lg:text-base font-semibold`}>Projects</Link>
+                <Link onClick={() => setIsToggled(!isToggled)} to="accounts" className={`${isActive === "accounts" ? "bg-black text-white" : "bg-[#F6F6F6] text-black"} rounded-md px-2 py-2 text-center w-full text-xs lg:text-base font-semibold`}>Accounts</Link>
+                <Link onClick={() => setIsToggled(!isToggled)} to="certifications" className={`${isActive === "certifications" ? "bg-black text-white" : "bg-[#F6F6F6] text-black"} rounded-md px-2 py-2 text-center w-full text-xs lg:text-base font-semibold`}>Certifications</Link>
+            </div>
 
-                <div className='w-full pb-3'>
-                    <SidenavLinks/>
+            <div className='w-full flex justify-start'>
+                <div className='bg-[#F6F6F6] rounded-full py-2 px-2 flex items-center justify-center'>
+                    <IoIosSettings className='text-2xl'  />
                 </div>
-                </div>
-
-        <Link className='relative mb-3 left-10 h-[7%] w-[10%] flex items-center justify-center rounded-full bg-[#F6F6F6]'>
-        <IoSettingsSharp className='text-xl'/>
-        </Link>
-
-        <Link className='relative underline text-sm text-blue-500 left-10  font-semibold '>
-        License
-        </Link>
-    </section>
+            </div>
+        </div>
+    </aside>}
     </>
   )
 }

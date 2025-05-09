@@ -27,6 +27,7 @@ import Login from './Pages/Login&SignUp/EmployerLogin.jsx'
 import EmployerSignup from './Pages/Login&SignUp/EmployerSignUp.jsx'
 import ProfesionalLogin from './Pages/Login&SignUp/ProfesionalLogin.jsx'
 import ProfessionalSignUp from './Pages/Login&SignUp/ProfessionalSignUp.jsx'
+import GigsOptionsBody from './Pages/UserDashboard/Routes/GigsOptionsBody.jsx'
 // import SignUp from './Pages/Login&SignUp/SignUp.jsx'
 // import ProfessionalSignUp from './Pages/Login&SignUp/ProfessionalSignUp.jsx'
 // import EmployerSignUp from './Pages/Login&SignUp/EmployerSignUp.jsx'
@@ -39,19 +40,19 @@ const router = createBrowserRouter([
     errorElement: <Error />,
   },
   {
-    path: '/UserDashboard',
+    path: '/user-dashboard',
     element: <UserDashboard />,
     children: [
       { index: true, element: <Profile /> }, // Default route
-      { path: 'profile', element: <Profile /> },
-      { path: 'gigs-options', element: <GigsOptions /> },
+      { path: 'dashboard', element: <Profile /> },
+      { path: 'gigs-options', element: <GigsOptionsBody /> },
       { path: 'messages', element: <Messages /> },
       { path: 'projects', element: <Projects /> },
       { path: 'accounts', element: <Accounts /> },
       { path: 'certifications', element: <Certifications /> },
       {
         path: 'gigs-options',
-        element: <GigsOptions />,
+        element: <GigsOptionsBody />,
         children: [
           { index: true, element: <Recommended /> }, // Default route for GigsOptions
           { path: 'recommended', element: <Recommended /> },
@@ -73,35 +74,35 @@ const router = createBrowserRouter([
     ],
   },
   {
-    path: '/EmployerDashboard/*',
+    path: '/employer-dashboard/*',
     element: <EmployerDashboard />,
   },
   {
-    path: '/JobDetails',
+    path: '/job-details',
     element: <JobDetails />,
   },
   {
-    path: '/Onboarding',
+    path: '/on-boarding',
     element: <Onboarding />,
   },
   {
-    path: '/SignUp-As',
+    path: '/signup-as',
     element: <SignUpAs />,
   },
   {
-    path: '/EmployerSignUp',
+    path: '/employer-signup',
     element: <EmployerSignup/>,
   },
   {
-    path: '/Login',
+    path: '/login',
     element: <Login/>,
   },
   {
-    path: '/ProffesionalLogin',
+    path: '/professional-login',
     element: <ProfesionalLogin/>,
   },
   {
-    path: '/ProffesionalSignUp',
+    path: '/professional-signup',
     element: <ProfessionalSignUp/>,
   },
   

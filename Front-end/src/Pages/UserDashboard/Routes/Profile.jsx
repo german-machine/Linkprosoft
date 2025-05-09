@@ -4,10 +4,10 @@ import ProfileForm from '../components/ProfileForm'
 
 const Profile = () => {
   return (
-   <>
-   <ProfileBody/>
-   <ProfileForm/>
-   </>
+    <section className='w-full lg:w-[70%] xl:w-[75%]'>
+      <ProfileBody />
+      <ProfileForm />
+    </section>
   )
 }
 

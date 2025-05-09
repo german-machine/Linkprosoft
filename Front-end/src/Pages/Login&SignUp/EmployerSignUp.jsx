@@ -89,6 +89,7 @@ const EmployerSignup = () => {
 
                         </form>
                     </div>
+                    </div>
             </section>
         </>
 

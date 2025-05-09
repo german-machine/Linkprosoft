@@ -4,7 +4,7 @@ import GigsOptionsLinks from '../components/GigsOptionsLinks'
 
 const GigsOptionsBody = () => {
   return (
-    <section>
+    <section className='min-h-screen'>
       <Banner />
       <GigsOptionsLinks />
     </section>

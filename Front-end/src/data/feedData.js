@@ -4,7 +4,7 @@ import img2 from '../assets/images/img3.png'
 import profile from '../assets/images/Person6.png'
 
 
-export const feedData = [
+export const feedData =  [
 
     {
       img: img2,

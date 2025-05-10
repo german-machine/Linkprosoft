@@ -8,12 +8,6 @@ import { FcGoogle } from "react-icons/fc";
 
 const EmployerSignup = () => {
 
-    const [acceptTerms, setAcceptTerms] = useState(false)
-
-    const handleSubmit = (e) => {
-        e.PreventDefault()
-        alert(acceptTerms)
-    }
     return (
         <>
             <HeaderBanner
@@ -95,7 +89,7 @@ const EmployerSignup = () => {
 
                         </form>
                     </div>
-                </div>
+                    </div>
             </section>
         </>
 

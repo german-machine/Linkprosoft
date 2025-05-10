@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState, useRef } from 'react'
 import worker from '../assets/worker.svg'
 import { Link } from 'react-router-dom'
 import '../components/Scroll.css'
@@ -7,6 +7,7 @@ import { IoIosSettings } from 'react-icons/io'
 
 const SideBar = ({ isToggled, location, isActive, setIsActive, setIsToggled }) => {
     const [rangeValue, setRangeValue] = useState(70);
+    const menuRef = useRef(null);
 
     useEffect(() => {
         const percent = (rangeValue / 100) * 100;
@@ -22,11 +23,27 @@ const SideBar = ({ isToggled, location, isActive, setIsActive, setIsToggled }) =
     }, [location.pathname]);
 
 
+    useEffect(() => {
+        function handleClickOutside(event) {
+          if (menuRef.current && !menuRef.current.contains(event.target)) {
+            setIsToggled(false);
+          }
+        }
+    
+        if (isToggled) {
+          document.addEventListener("mousedown", handleClickOutside);
+        }
+    
+        return () => {
+          document.removeEventListener("mousedown", handleClickOutside);
+        };
+      }, [isToggled]);
+
 
   return (
     <>
     
-    {<aside className={`${isToggled ? "right-0 duration-1000" : "-right-[100%] lg:right-0 duration-1000"} absolute lg:fixed lg:left-0 lg:bottom0 w-[80%] md:w-[60%] lg:w-[30%] xl:w-[25%] bg-white lg:bg-transparent drop-shadow-lg lg:drop-shadow-none rounded-md lg:rounded-none z-[999] overflow-x-hidden`}>
+    {<aside ref={menuRef} className={`${isToggled ? "right-0 duration-1000" : "-right-[100%] lg:right-0 duration-1000"} fixed top-0 lg:left-0 lg:bottom0 w-[80%] md:w-[60%] lg:w-[30%] xl:w-[25%] bg-white lg:bg-transparent drop-shadow-lg lg:drop-shadow-none rounded-md lg:rounded-none z-[9999] overflow-x-hidden min-h-screen`}>
         <div className="w-[90%] mx-auto flex flex-col gap-5 py-5 lg:py-0">
             <div className='py-3 bg-[#F6F6F6] rounded-xl'>
                 <div className='flex justify- gap-4 items-center px-4'>

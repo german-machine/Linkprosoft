@@ -32,7 +32,7 @@ const Navbar = ({ handleMenu, isToggled }) => {
           </div>
 
           <div className='block lg:hidden' onClick={handleMenu}>
-            {isToggled ? <IoCloseSharp className="text-white text-2xl md:text-5xl" /> : <RiMenu5Fill className='text-white text-2xl md:text-5xl' />}
+            <RiMenu5Fill className='text-white text-2xl md:text-5xl' />
           </div>
         </div>
       </header>

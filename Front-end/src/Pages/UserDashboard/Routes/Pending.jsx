@@ -2,20 +2,20 @@ import React from 'react'
 import { FcGoogle } from 'react-icons/fc'
 const Pending = () => {
   return (
-    <>
-      <section className='mt-3 pb-20 w-[90%]'>
-    <div className='bg-[#D9D9D94D] items-center py-2 flex  px-5 mb-4 font-Inter text-sm rounded-md'>
-      <div className='w-[20%]'>
-      <FcGoogle className='text-[150px]' />
-      </div>
-      <div>
-      <p className='text-2xl font-bold'>Google</p>
-      <p className='text-sm'>A competetnt UI designer with visual appealing designs and a work experience of 5 years with knowledge of Figma,  appealing designs and a work experience of 5 years with knowledge of Figma, Adobe XD, Illustrator and front end toools HTML, CSS , JavaScript,designer with visual appealing designs and a work experience of 5 years with knowledge of Figma, Adobe XD, Illustrator and front end toools HTML, CSS , JavaScript,</p>
-      </div>
-    </div>
+    <section className="w-full">
+      <div className='w-full lg:w-[90%] mx-auto py-8'>
+        <div className='flex gap-3 bg-[#D9D9D94D] py-2 px-5 mb-4 font-Inter text-sm rounded-md'>
+          <div className='flex items-center'>
+            <FcGoogle className='text-[4rem] lg:text-[8rem]' />
+          </div>
 
-  </section>
-    </>
+          <div className='font-Inter text-sm'>
+            <p className='text-2xl font-bold'>Google</p>
+            <p>A competetnt UI designer with visual appealing designs and a work experience of 5 years with knowledge of Figma, Adobe XD, Illustrator</p>
+          </div>
+        </div>
+      </div>
+    </section>
   )
 }
 

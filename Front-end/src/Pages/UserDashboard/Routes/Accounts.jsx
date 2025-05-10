@@ -2,7 +2,7 @@ import React from 'react'
 
 const Accounts = () => {
   return (
-    <div>Accounts</div>
+    <section className='min-h-screen'>Accounts</section>
   )
 }
 

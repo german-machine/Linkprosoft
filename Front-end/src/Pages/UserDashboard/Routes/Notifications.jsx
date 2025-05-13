@@ -4,7 +4,7 @@ import { FcGoogle } from "react-icons/fc";
 const Notifications = () => {
   return (
     <section className="w-full">
-      <div className='w-full lg:w-[90%] mx-auto py-8'>
+      <div className='w-full lg:w-[95%] py-8'>
         <div className='flex gap-3 bg-[#D9D9D94D] py-2 px-5 mb-4 font-Inter text-sm rounded-md'>
           <div className='flex items-center'>
             <FcGoogle className='text-[4rem] lg:text-[5rem]' />

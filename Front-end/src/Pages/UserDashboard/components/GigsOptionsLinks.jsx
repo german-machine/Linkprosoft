@@ -13,7 +13,7 @@ const GigsOptionsLinks = () => {
 
   return (
       <section className='w-full mt-5 '>
-        <div className='w-full lg:w-[90%] mx-auto border-b-[5px] border-[#F6F6F6] flex flex-1 justify-around'>
+        <div className='w-full lg:w-[95%] border-b-[5px] border-[#F6F6F6] flex flex-1 justify-around'>
           <Link 
             to="recommended"
             className={`transition-colors duration-300 ${

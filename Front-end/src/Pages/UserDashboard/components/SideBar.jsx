@@ -43,7 +43,7 @@ const SideBar = ({ isToggled, location, isActive, setIsActive, setIsToggled }) =
   return (
     <>
     
-    {<aside ref={menuRef} className={`${isToggled ? "right-0 duration-1000" : "-right-[100%] lg:right-0 duration-1000"} fixed top-0 lg:left-0 lg:bottom0 w-[80%] md:w-[60%] lg:w-[30%] xl:w-[25%] bg-white lg:bg-transparent drop-shadow-lg lg:drop-shadow-none rounded-md lg:rounded-none z-[9999] overflow-x-hidden min-h-screen`}>
+    {<aside ref={menuRef} className={`${isToggled ? "right-0 duration-1000" : "-right-[100%] lg:right-0 duration-1000"} fixed top-0 lg:top-auto lg:left-0 lg:bottom0 w-[80%] md:w-[60%] lg:w-[30%] xl:w-[25%] bg-white lg:bg-transparent drop-shadow-lg lg:drop-shadow-none rounded-md lg:rounded-none z-[9999] overflow-x-hidden min-h-screen`}>
         <div className="w-[90%] mx-auto flex flex-col gap-5 py-5 lg:py-0">
             <div className='py-3 bg-[#F6F6F6] rounded-xl'>
                 <div className='flex justify- gap-4 items-center px-4'>
@@ -74,18 +74,18 @@ const SideBar = ({ isToggled, location, isActive, setIsActive, setIsToggled }) =
             </div>
             
             <div className='flex flex-col gap-3 flex-1'>
-                <Link onClick={() => setIsToggled(!isToggled)} to="dashboard" className={`${isActive === "dashboard" ? "bg-black text-white" : "bg-[#F6F6F6] text-black"} rounded-md px-2 py-2 text-center w-full text-xs lg:text-base font-semibold`}>Dashboard</Link>
-                <Link onClick={() => setIsToggled(!isToggled)} to="gigs-options" className={`${isActive === "gigs-options" ? "bg-black text-white" : "bg-[#F6F6F6] text-black"} rounded-md px-2 py-2 text-center w-full text-xs lg:text-base font-semibold`}>Gigs Options</Link>
-                <Link onClick={() => setIsToggled(!isToggled)} to="messages" className={`${isActive === "messages" ? "bg-black text-white" : "bg-[#F6F6F6] text-black"} rounded-md px-2 py-2 text-center w-full text-xs lg:text-base font-semibold`}>Messages</Link>
-                <Link onClick={() => setIsToggled(!isToggled)} to="projects" className={`${isActive === "projects" ? "bg-black text-white" : "bg-[#F6F6F6] text-black"} rounded-md px-2 py-2 text-center w-full text-xs lg:text-base font-semibold`}>Projects</Link>
-                <Link onClick={() => setIsToggled(!isToggled)} to="accounts" className={`${isActive === "accounts" ? "bg-black text-white" : "bg-[#F6F6F6] text-black"} rounded-md px-2 py-2 text-center w-full text-xs lg:text-base font-semibold`}>Accounts</Link>
-                <Link onClick={() => setIsToggled(!isToggled)} to="certifications" className={`${isActive === "certifications" ? "bg-black text-white" : "bg-[#F6F6F6] text-black"} rounded-md px-2 py-2 text-center w-full text-xs lg:text-base font-semibold`}>Certifications</Link>
+                <Link onClick={() => setIsToggled(!isToggled)} to="dashboard" className={`${isActive === "dashboard" ? "bg-black text-white" : "bg-[#F6F6F6] text-black"} rounded-md px-2 py-3 lg:py-2 text-center w-full text-xs lg:text-base font-semibold`}>Dashboard</Link>
+                <Link onClick={() => setIsToggled(!isToggled)} to="gigs-options" className={`${isActive === "gigs-options" ? "bg-black text-white" : "bg-[#F6F6F6] text-black"} rounded-md px-2 py-3 lg:py-2 text-center w-full text-xs lg:text-base font-semibold`}>Gigs Options</Link>
+                <Link onClick={() => setIsToggled(!isToggled)} to="messages" className={`${isActive === "messages" ? "bg-black text-white" : "bg-[#F6F6F6] text-black"} rounded-md px-2 py-3 lg:py-2 text-center w-full text-xs lg:text-base font-semibold`}>Messages</Link>
+                <Link onClick={() => setIsToggled(!isToggled)} to="projects" className={`${isActive === "projects" ? "bg-black text-white" : "bg-[#F6F6F6] text-black"} rounded-md px-2 py-3 lg:py-2 text-center w-full text-xs lg:text-base font-semibold`}>Projects</Link>
+                <Link onClick={() => setIsToggled(!isToggled)} to="accounts" className={`${isActive === "accounts" ? "bg-black text-white" : "bg-[#F6F6F6] text-black"} rounded-md px-2 py-3 lg:py-2 text-center w-full text-xs lg:text-base font-semibold`}>Accounts</Link>
+                <Link onClick={() => setIsToggled(!isToggled)} to="certifications" className={`${isActive === "certifications" ? "bg-black text-white" : "bg-[#F6F6F6] text-black"} rounded-md px-2 py-3 lg:py-2 text-center w-full text-xs lg:text-base font-semibold`}>Certifications</Link>
             </div>
 
             <div className='w-full flex justify-start'>
-                <div className='bg-[#F6F6F6] rounded-full py-2 px-2 flex items-center justify-center'>
+                <Link onClick={() => setIsToggled(!isToggled)} to="settings" className='bg-[#F6F6F6] rounded-full py-2 px-2 flex items-center justify-center'>
                     <IoIosSettings className='text-2xl'  />
-                </div>
+                </Link>
             </div>
         </div>
     </aside>}

@@ -27,11 +27,12 @@ import Login from './Pages/Login&SignUp/EmployerLogin.jsx'
 import EmployerSignup from './Pages/Login&SignUp/EmployerSignUp.jsx'
 import ProfesionalLogin from './Pages/Login&SignUp/ProfesionalLogin.jsx'
 import ProfessionalSignUp from './Pages/Login&SignUp/ProfessionalSignUp.jsx'
-import GigsOptionsBody from './Pages/UserDashboard/Routes/GigsOptionsBody.jsx'
-// import SignUp from './Pages/Login&SignUp/SignUp.jsx'
-// import ProfessionalSignUp from './Pages/Login&SignUp/ProfessionalSignUp.jsx'
-// import EmployerSignUp from './Pages/Login&SignUp/EmployerSignUp.jsx'
-// import Login from './Pages/Login&SignUp/Login.jsx'
+import GigsOptionsBody from './Pages/UserDashboard/components/GigsOptionsBody.jsx'
+import Settings from './Pages/UserDashboard/Routes/Settings.jsx'
+import Help from './Pages/UserDashboard/Routes/Help.jsx'
+import CustomerSupport from './Pages/UserDashboard/Routes/CustomerSupport.jsx'
+import SettingsBody from './Pages/UserDashboard/components/SettingsBody.jsx'
+import PasswordReset from './Pages/UserDashboard/Routes/PasswordReset.jsx'
 
 const router = createBrowserRouter([
   {
@@ -45,11 +46,12 @@ const router = createBrowserRouter([
     children: [
       { index: true, element: <Profile /> }, // Default route
       { path: 'dashboard', element: <Profile /> },
-      { path: 'gigs-options', element: <GigsOptionsBody /> },
+      { path: 'gigs-options', element: <GigsOptions /> },
       { path: 'messages', element: <Messages /> },
       { path: 'projects', element: <Projects /> },
       { path: 'accounts', element: <Accounts /> },
       { path: 'certifications', element: <Certifications /> },
+      { path: 'settings', element: <Settings /> },	
       {
         path: 'gigs-options',
         element: <GigsOptionsBody />,
@@ -71,6 +73,16 @@ const router = createBrowserRouter([
           { path: 'rejected', element: <Rejected /> },
         ],
       },
+      {
+        path: 'settings',
+        element: <Settings />,
+        children: [
+          { index: true, element: <SettingsBody /> },
+          { path: 'password-reset', element: <PasswordReset /> },
+          { path: 'help', element: <Help /> },
+          { path: 'customers-support', element: <CustomerSupport /> },
+        ]
+      }
     ],
   },
   {

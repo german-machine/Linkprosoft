@@ -5,6 +5,7 @@ import Projects from '../Routes/Projects'
 import Accounts from '../Routes/Accounts'
 import Certifications from '../Routes/Certifications'
 import GigsOptions from '../Routes/GigsOptions'
+import Settings from '../Routes/Settings'
 
 const Main = ({ isActive }) => {
     return (
@@ -22,7 +23,9 @@ const Main = ({ isActive }) => {
                                 ? <Accounts />
                                 : isActive === "certifications"
                                     ? <Certifications />
-                                    : "No such path is found"
+                                    : isActive === "settings"
+                                        ? <Settings />
+                                        : "No such path found"
             }
         </main>
     )

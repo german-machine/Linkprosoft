@@ -23,7 +23,7 @@ const Navbar = () => {
             <div className={`flex flex-col lg:flex-row justify-around items-center gap-4 lg:gap-0 mb-10 lg:mb-0 w-[80%] lg:w-[50%] xl:w-[40%] mx-auto text-white lg:text-black`}>
               <Link to="/">Home</Link>
               <Link to="/user-dashboard">About</Link>
-              <Link to="/job-details">How It Works</Link>
+              <Link to="/on-boarding">How It Works</Link>
               <Link to="/employer-dashboard">Contact Us</Link>
             </div>
 

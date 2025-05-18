@@ -10,6 +10,7 @@ const SignUpAs = () => {
         logoColor="#006FA3"
         btnColor="#006FA3"
         btnTextColor="#ffffff"
+        pageHeader='Sign In'
       />
 
       <section className='w-full flex flex-grow flex-1 py-20'>

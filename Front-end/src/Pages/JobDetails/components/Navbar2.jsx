@@ -4,6 +4,8 @@ import { Link } from 'react-router-dom'
 import { IoMdSearch } from 'react-icons/io'
 import { IoCloseSharp } from 'react-icons/io5'
 import { RiMenu5Fill } from 'react-icons/ri'
+import PostGigsButton from '../../../constants/PostGigsButton'
+import SignInButton from '../../../constants/SignInButton'
 
 const Navbar = () => {
   const [isToggled, setIsToggled] = useState(false);
@@ -28,8 +30,12 @@ const Navbar = () => {
 
         <div className='w-[40%] mx-auto hidden lg:flex items-center justify-end'>
           <div className='lg:w-full xl:w-[90%] mx-auto px-[8%] flex gap-[4%] items-center justify-end'>
-            <Link href="/" className='block bg-[#03AEFF] font-Inter text-white text-sm rounded-md py-2 px-6'>Post Gigs</Link>
-            <Link href="/" className='block bg-[#006FA3] font-Inter text-white text-sm rounded-md py-2 px-6'>Sign In</Link>
+            <PostGigsButton>
+              Post Gigs
+            </PostGigsButton>
+            <SignInButton>
+              Sign In
+            </SignInButton>
           </div>
           <div className='w-[10%] mx-auto flex rounded-ful align-center justify-center'>
             <img src={profile} alt="" className='rounded-full' />

@@ -18,33 +18,27 @@ const GigsOptionsLinks = () => {
             to="recommended"
             className={`transition-colors duration-300 ${
               isActive === "recommended" ? 'text-black' : 'text-[#00000099]'
-            } font-semibold text-xs lg:text-base`}
+            } font-semibold text-base lg:text-base`}
           >
             Recommended
           </Link>
-          <Link 
-            to="recent-viewed"
-            className={`transition-colors duration-300 ${
-              isActive === "recent-viewed" ? 'text-black' : 'text-[#00000099]'
-            } font-semibold text-xs lg:text-base`}
-          >
-            Recent Viewed Gigs
-          </Link>
+
           <Link 
             to="saved-gigs" 
             className={`transition-colors duration-300 ${
               isActive === "saved-gigs" ? 'text-black' : 'text-[#00000099]'
-            } font-semibold text-xs lg:text-base`}
+            } font-semibold text-base lg:text-base`}
           >
             Saved Gigs
           </Link>
+
           <Link 
             to="notifications" 
             className={`transition-colors duration-300 ${
               isActive === "notifications" ? 'text-black' : 'text-[#00000099]'
-            } font-semibold flex gap-1 items-center text-xs lg:text-base`}
+            } font-semibold flex gap-1 items-center text-base lg:text-base`}
           >
-            Notifications <IoNotifications className='hidden lg:block'/>
+            Notifications <IoNotifications />
           </Link>
         </div>
 

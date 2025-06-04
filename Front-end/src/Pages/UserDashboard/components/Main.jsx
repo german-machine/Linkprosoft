@@ -1,11 +1,12 @@
 import React from 'react'
 import Profile from '../Routes/Profile'
-import Messages from '../Routes/Messages'
-import Projects from '../Routes/Projects'
-import Accounts from '../Routes/Accounts'
 import Certifications from '../Routes/Certifications'
-import GigsOptions from '../Routes/GigsOptions'
 import Settings from '../Routes/Settings'
+import Post from '../Routes/Post'
+import Billing from '../Routes/Billing'
+import NotificationSidebar from '../Routes/NotificationSidebar'
+import Report from '../Routes/Report'
+import ProjectSidebar from '../Routes/ProjectSidebar'
 
 const Main = ({ isActive }) => {
     return (
@@ -13,19 +14,21 @@ const Main = ({ isActive }) => {
 
             {isActive === "dashboard"
                 ? <Profile />
-                : isActive === "gigs-options"
-                    ? <GigsOptions />
-                    : isActive === "messages"
-                        ? <Messages />
+                : isActive === "certifications"
+                    ? <Certifications />
+                    : isActive === "post"
+                        ? <Post />
                         : isActive === "projects"
-                            ? <Projects />
-                            : isActive === "accounts"
-                                ? <Accounts />
-                                : isActive === "certifications"
-                                    ? <Certifications />
-                                    : isActive === "settings"
-                                        ? <Settings />
-                                        : "No such path found"
+                            ? <ProjectSidebar />
+                            : isActive === "billing"
+                                ? <Billing />
+                                : isActive === "notifications"
+                                    ? <NotificationSidebar />
+                                    : isActive === "report"
+                                        ? <Report />
+                                        : isActive === "settings"
+                                            ? <Settings />
+                                            : "No such path found"
             }
         </main>
     )

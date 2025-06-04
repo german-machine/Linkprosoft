@@ -30,16 +30,15 @@ const Navbar = () => {
 
         <div className='w-[40%] mx-auto hidden lg:flex items-center justify-end'>
           <div className='lg:w-full xl:w-[90%] mx-auto px-[8%] flex gap-[4%] items-center justify-end'>
-            <PostGigsButton>
-              Post Gigs
-            </PostGigsButton>
             <SignInButton>
               Sign In
             </SignInButton>
           </div>
-          <div className='w-[10%] mx-auto flex rounded-ful align-center justify-center'>
+
+          {/* should show only when the user is logged in */}
+          {/* <div className='w-[10%] mx-auto flex rounded-ful align-center justify-center'>
             <img src={profile} alt="" className='rounded-full' />
-          </div>
+          </div> */}
         </div>
 
         <div className='block lg:hidden' onClick={handleMenu}>

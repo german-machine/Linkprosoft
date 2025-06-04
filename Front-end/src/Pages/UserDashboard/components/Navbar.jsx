@@ -15,10 +15,10 @@ const Navbar = ({ handleMenu, isToggled }) => {
             <Link to='/' className='text-4xl md:text-6xl lg:text-3xl font-bold text-white font-Inter'>Linkprosoft</Link>
           </div>
 
-          <div className='w-[40%] mx-auto hidden lg:flex justify-between items-center bg-transparent text-white border border-white rounded-md'>
-            <input type="text" placeholder='What skills are you looking for?' className='w-[90%] outline-none px-2 bg-transparent placeholder-white placeholder-opacity-50' />
-            <div className="w-[10%] flex justify-center py-1 px-1 bg-[#03AEFF] rounded-md cursor-pointer">
-              <IoMdSearch className='block text-3xl text-center' />
+          <div className='w-[40%] mx-auto hidden lg:flex justify-between items-center bg-transparent border border-slate-400 rounded-md'>
+            <input type="text" placeholder='What skills are you looking for?' className='w-[90%] outline-none px-2 bg-transparent placeholder-white placeholder-opacity-50 text-white' />
+            <div className="w-[10%] flex justify-center px-1 bg-[#03AEFF] rounded-md cursor-pointer">
+              <IoMdSearch className='block text-3xl text-center text-white' />
             </div>
           </div>
 

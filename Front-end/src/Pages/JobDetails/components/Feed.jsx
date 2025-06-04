@@ -8,12 +8,8 @@ const Feed = () => {
     const jobRef = useRef(null);
     const closeRef = useRef(null);
 
-    const handleModal = () => {
-        if (jobRef.current) {
-            jobRef.current.showModal();
-        } else if (!jobRef.current) {
-            jobRef.current.closeModal();
-        }
+    const showModal = () => {
+        jobRef.current.showModal();
     }
 
     function closeModal() {
@@ -36,7 +32,7 @@ const Feed = () => {
                             </div>
                         </div>
 
-                        <div className="w-full grid grid-cols-2 md:grid-cols-4 gap-4 py-6" onClick={handleModal}>
+                        <div className="w-full grid grid-cols-2 md:grid-cols-4 gap-4 py-6" onClick={showModal}>
                             {feedData.map((feed, index) => (
                                 <div key={index} className="shadow-lg transition-shadow rounded-lg overflow-hidden cursor-pointer ">
                                     <div className="h-[10rem] relative scale-100 hover:scale-110 transition-all">
@@ -103,21 +99,6 @@ const Feed = () => {
                                 1pm-10pm Asia/Manila <br />
                                 11pm-8AM Central Standard Time
                             </p>
-                        </div>
-
-                        <div className='mb-3'>
-                            <h2 className="text-lg font-semibold">Salary Range: 800-2000 USD (Subject to evaluation of experience and skill level)</h2>
-                            <p className="text-sm text-gray-700">
-                                At Umarks, we help fast-growing companies by connecting them with global talent while supporting the careers of creative and tech professionals.
-                            </p>
-
-                            <ul className="list-disc pl-5 space-y-2 text-sm text-gray-700">
-                                <li>Create Designs: Develop captivating design concepts and wireframes for websites and landing pages, ensuring they align with business goals.</li>
-                                <li>Create Designs: Develop captivating design concepts and wireframes for websites and landing pages, ensuring they align with business goals.</li>
-                                <li>Create Designs: Develop captivating design concepts and wireframes for websites and landing pages, ensuring they align with business goals.</li>
-                                <li>Create Designs: Develop captivating design concepts and wireframes for websites and landing pages, ensuring they align with business goals.</li>
-                                <li>Create Designs: Develop captivating design concepts and wireframes for websites and landing pages, ensuring they align with business goals.</li>
-                            </ul>
                         </div>
                     </div>
 

@@ -12,18 +12,14 @@ const Newsletter = () => {
           </div>
 
           <div>
-            <h2 className='text-center font-Inter text-3xl sm:text-2xl text-white leading-normal font-bold'>Subscribe Newsletter</h2>
-            <p className='sm:max-w-[70%] mx-auto font-Inter text-white text-center mb-4 text-sm'>You will never miss an update, new release and latest news, Our newsletter will be delivered once a week.</p>
+            <h2 className='text-center font-Inter text-xl mb-3 text-white leading-normal font-bold'>Subscribe Newsletter</h2>
           </div>
 
           <div className='w-full sm:w-[65%] mx-auto flex justify-between items-center bg-white rounded-full'>
-            <input type="email" className='focus:border-transparent outline-none w-[70%] px-5 bg-transparent' placeholder='Enter your email' />
-            <Link className='w-[30%] text-center text-white font-bold font-Inter text-lg bg-[#03AEFF] py-1 lg:py-2 rounded-r-full'>Subscribe</Link>
+            <input type="email" className='focus:border-transparent outline-none w-[70%] py-2 px-5 bg-transparent' placeholder='Enter your email' />
+            <Link className='w-[30%] text-center text-white font-bold font-Inter text-base bg-[#03AEFF] py-2 rounded-r-full'>Subscribe</Link>
           </div>
 
-          <div className='py-3'>
-            <p className='font-Inter text-white text-sm'>We promise not to SPAM you</p>
-          </div>
         </div>
       </section>
     </>

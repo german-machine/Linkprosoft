@@ -17,7 +17,7 @@ const UserDashboard = () => {
   return (
     <>
       <Navbar handleMenu={handleMenu} isToggled={isToggled} />
-      <div className="w-full py-0 lg:py-2 xl:py-8 relative overflow-x-hidden">
+      <div className="w-full bg-[#F0F0F0] min-h-screen py-0 lg:py-2 xl:py-8 relative overflow-x-hidden">
         <div className='w-full flex justify-end lg:justify-normal'>
           <Sidebar isToggled={isToggled} setIsToggled={setIsToggled} location={location} isActive={isActive} setIsActive={setIsActive} />
           <Main isActive={isActive} />

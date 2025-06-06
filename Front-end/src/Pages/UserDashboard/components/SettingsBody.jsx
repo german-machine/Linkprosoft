@@ -6,6 +6,7 @@ import { IoIosLock } from "react-icons/io";
 import { MdDelete } from "react-icons/md";
 import { TbHelpCircleFilled } from "react-icons/tb";
 import { AiFillCustomerService } from "react-icons/ai";
+import { HiPencil } from "react-icons/hi";
 import { ToastContainer, toast } from "react-toastify";
 
 const SettingsBody = () => {
@@ -37,6 +38,13 @@ const SettingsBody = () => {
                             <IoMoon />
                         </div>
                     </div>
+
+                    <Link to='edit-profile' className='w-full sm:w-[90%] md:w-full lg:mx-0 bg-[#F6F6F6] rounded-md flex justify-between items-center px-3 py-4 lg:py-3'>
+                        <div className='font-medium font-Inter text-[15px] lg:text-[20px]'>Edit Profile</div>
+                        <div className=''>
+                            <HiPencil className="text-[22px]" />
+                        </div>
+                    </Link>
 
                     <Link to='password-reset' className='w-full sm:w-[90%] md:w-full lg:mx-0 bg-[#F6F6F6] rounded-md flex justify-between items-center px-3 py-4 lg:py-3'>
                         <div className='font-medium font-Inter text-[15px] lg:text-[20px]'>Password Reset</div>

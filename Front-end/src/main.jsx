@@ -27,7 +27,7 @@ import PasswordReset from './Pages/UserDashboard/Routes/PasswordReset.jsx'
 
 // user-dashboard routes
 import UserDashboard from './Pages/UserDashboard/UserDashboard.jsx'
-import Profile from './Pages/UserDashboard/Routes/Profile.jsx'
+import EditProfile from './Pages/UserDashboard/Routes/EditProfile.jsx'
 import Certifications from './Pages/UserDashboard/Routes/Certifications.jsx'
 import Post from './Pages/UserDashboard/Routes/Post.jsx'
 import Projects from './Pages/UserDashboard/Routes/Projects.jsx'
@@ -36,6 +36,7 @@ import Billing from './Pages/UserDashboard/Routes/Billing.jsx'
 import NotificationSidebar from './Pages/UserDashboard/Routes/NotificationSidebar.jsx'
 import Report from './Pages/UserDashboard/Routes/Report.jsx'
 import ProjectSidebar from './Pages/UserDashboard/Routes/ProjectSidebar.jsx'
+import Dashboard from './Pages/UserDashboard/Routes/Dashboard.jsx'
 
 const router = createBrowserRouter([
   {
@@ -47,8 +48,8 @@ const router = createBrowserRouter([
     path: '/user-dashboard',
     element: <UserDashboard />,
     children: [
-      { index: true, element: <Profile /> }, // Default route
-      { path: 'dashboard', element: <Profile /> },
+      { index: true, element: <Dashboard /> }, // Default route
+      { path: 'dashboard', element: <Dashboard /> },
       { path: 'certifications', element: <Certifications /> },
       { path: 'post', element: <Post /> },
       { path: 'projects', element: <ProjectSidebar /> },
@@ -80,6 +81,7 @@ const router = createBrowserRouter([
         path: 'settings',
         children: [
           { index: true, element: <SettingsBody /> },
+          { path: 'edit-profile', element: <EditProfile /> },
           { path: 'password-reset', element: <PasswordReset /> },
           { path: 'help', element: <Help /> },
           { path: 'customers-support', element: <CustomerSupport /> },

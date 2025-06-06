@@ -45,7 +45,7 @@ const SideBar = ({ isToggled, location, isActive, setIsActive, setIsToggled }) =
     return (
         <>
 
-            {<aside ref={menuRef} className={`${isToggled ? "right-0 duration-300" : "-right-[100%] lg:right-0 duration-300"} fixed top-0 lg:top-[9vh] lg:left-0 bottom-0 w-[80%] md:w-[60%] lg:w-[26%] xl:w-[25%] bg-[#F6F6F6] lg:bg-transparent drop-shadow-lg lg:drop-shadow-none rounded-md lg:rounded-none z-[9999] lg:z-[999] overflow-x-hidden scrollbar-hide min-h-screen`}>
+            {<aside ref={menuRef} className={`${isToggled ? "right-0 duration-300" : "-right-[100%] lg:right-0 duration-300"} fixed top-0 lg:top-[9vh] lg:left-0 bottom-0 w-[80%] md:w-[60%] lg:w-[26%] xl:w-[25%] bg-[#F6F6F6] lg:bg-transparent drop-shadow-lg lg:drop-shadow-none z-[9999] lg:z-[999] overflow-x-hidden scrollbar-hide min-h-screen`}>
                 <div className="w-[90%] mx-auto flex flex-col gap-5 py-5 min-h-screen">
                     <div className='py-8 lg:py-8 bg-white shadow-lg rounded-xl'>
                         <div className='flex gap-4 items-center px-4'>

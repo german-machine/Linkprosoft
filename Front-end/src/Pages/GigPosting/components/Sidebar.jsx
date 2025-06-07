@@ -20,7 +20,7 @@ function Sidebar({ menuActive, setMenuActive }) {
     }, [menuActive])
 
     return (
-        <div ref={menuRef} className={`${menuActive ? 'right-0 duration-500' : '-right-[1000%] lg:left-0 duration-500'} w-[70%] lg:w-[25%] top-0 lg:top-[13vh] bottom-0 fixed shadow-2xl z-[999] bg-white`}>
+        <div ref={menuRef} className={`${menuActive ? 'right-0 duration-500' : '-right-[1000%] lg:left-0 duration-500'} w-[70%] lg:w-[25%] top-0 lg:top-[12vh] xl:top-[9vh] bottom-0 fixed shadow-2xl z-[999] bg-white`}>
             Sidebar;
         </div>
     )

@@ -11,9 +11,9 @@ function Navbar({ menuActive, setMenuActive }) {
     }
 
     return (
-        <section className="w-full flex place-self-end bg-[#000000] sticky top-0">
+        <section className="w-full flex place-self-end bg-[#000000] sticky top-0 z-[9999]">
             <div className="w-[90%] lg:w-[80%] mx-auto py-3 flex items-center justify-between">
-                <div className='w-[10%] sm:w-[6%] lg:w-[6%] '>
+                <div className='w-[10%] sm:w-[6%] lg:w-[6%] xl:w-[4%] '>
                     <img src={logo} alt="" />
                 </div>
 

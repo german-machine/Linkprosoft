@@ -23,7 +23,7 @@ function GigPosting() {
                 <Main />
             </div>
 
-            <Outlet />
+            {/* <Outlet /> */}
         </div>
     )
 }

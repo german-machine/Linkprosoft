@@ -36,13 +36,10 @@ import Billing from './Pages/UserDashboard/Routes/Billing.jsx'
 import NotificationSidebar from './Pages/UserDashboard/Routes/NotificationSidebar.jsx'
 import Report from './Pages/UserDashboard/Routes/Report.jsx'
 import ProjectSidebar from './Pages/UserDashboard/Routes/ProjectSidebar.jsx'
-import Dashboard from './Pages/UserDashboard/Routes/Dashboard.jsx'
-import MessageList from './Pages/UserDashboard/Routes/MessageList.jsx'
 import ChatArea from './Pages/UserDashboard/Routes/ChatArea.jsx'
 import DashboardBody from './Pages/UserDashboard/components/DasboardBody.jsx'
 import GigPosting from './Pages/GigPosting/GigPosting.jsx'
 import ChooseTitle from './Pages/GigPosting/Routes/ChooseTitle.jsx'
-import SkillsRequired from './Pages/GigPosting/Routes/SkillsRequired.jsx'
 
 const router = createBrowserRouter([
   {
@@ -137,7 +134,6 @@ const router = createBrowserRouter([
     element: <GigPosting />,
     children: [
       { index: true, element: <ChooseTitle /> },
-      { path: 'skill-required', element: <SkillsRequired /> },
     ]
   }
 

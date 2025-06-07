@@ -13,7 +13,7 @@ const predefinedSkills = [
     "Painting",
 ];
 
-export default function SkillsRequired() {
+export default function SkillsRequired({ setIsActive }) {
     const [skills, setSkills] = useState(predefinedSkills);
     const [input, setInput] = useState("");
     const navigate = useNavigate();
@@ -30,9 +30,12 @@ export default function SkillsRequired() {
     };
 
 
-    function handleNavigate() {
-        console.log('i am clicked');
-        navigate(-1)
+    function handleNavigateBack() {
+        setIsActive(prev => prev = '')
+    }
+
+    function handleNavigateForward() {
+        setIsActive(prev => prev = 'scope-of-work')
     }
     return (
         <div className="w-full lg:w-[75%] xl:w-[75%] min-h-screen flex justify-center p-4 py-8 lg:py-10 lg:place-self-end relative z-[10]">
@@ -76,10 +79,10 @@ export default function SkillsRequired() {
                 </div>
 
                 <div className="flex flex-row justify-between items-center mt-[5rem] gap-4">
-                    <button  onClick={handleNavigate} className="border border-gray-300 text-gray-700 px-4 py-2 rounded-md hover:bg-gray-100 w-auto">
+                    <button  onClick={handleNavigateBack} className="border border-gray-300 text-gray-700 px-4 py-2 rounded-md hover:bg-gray-100 w-auto">
                         Back
                     </button>
-                    <Link className="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 w-auto">
+                    <Link onClick={handleNavigateForward} className="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 w-auto">
                         Next Scope
                     </Link>
                 </div>

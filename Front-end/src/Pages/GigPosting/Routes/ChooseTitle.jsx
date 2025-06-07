@@ -13,7 +13,10 @@ const predefinedSkills = [
     "Painting",
 ];
 
-export default function ChooseTitle() {
+export default function ChooseTitle({ setIsActive }) {
+    function handleNavigateForward() {
+        setIsActive(prev => prev = 'skill-required')
+    }
     return (
         <div className="w-full lg:w-[75%] xl:w-[75%] min-h-screen flex flex-col items-center px-4 md:px-20 lg:px-16 py-8 lg:py-10 place-self-end relative z-[10]">
             <div className="w-full lg:w-[90% mx-auto">
@@ -53,7 +56,7 @@ export default function ChooseTitle() {
                     <button disabled={true} className="border border-gray-300 text-gray-700 px-4 py-2 rounded-md hover:bg-gray-100 w-auto">
                         Back
                     </button>
-                    <Link to='skill-required' className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 transition">
+                    <Link onClick={handleNavigateForward} className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 transition">
                         Next: Skills
                     </Link>
                 </div>

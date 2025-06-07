@@ -35,8 +35,8 @@ export default function SkillsRequired() {
         navigate(-1)
     }
     return (
-        <div className="w-full lg:w-[75%] xl:w-[75%] min-h-screen flex lg:items-center justify-center g-white p-4 py-8 lg:py-0 lg:place-self-end relative z-[10]">
-            <div className="w-full max-w-2xl">
+        <div className="w-full lg:w-[75%] xl:w-[75%] min-h-screen flex justify-center p-4 py-8 lg:py-10 lg:place-self-end relative z-[10]">
+            <div className="w-full lg:w-[90%] mx-auto">
                 <h1 className="text-2xl md:text-3xl font-semibold mb-2 text-gray-900">
                     Skills required for the proper execution of the project
                 </h1>
@@ -75,11 +75,11 @@ export default function SkillsRequired() {
                     </div>
                 </div>
 
-                <div className="flex flex-col sm:flex-row justify-between items-center mt-6 gap-4">
-                    <button  onClick={handleNavigate} className="border border-gray-300 text-gray-700 px-4 py-2 rounded-md hover:bg-gray-100 w-full sm:w-auto">
+                <div className="flex flex-row justify-between items-center mt-[5rem] gap-4">
+                    <button  onClick={handleNavigate} className="border border-gray-300 text-gray-700 px-4 py-2 rounded-md hover:bg-gray-100 w-auto">
                         Back
                     </button>
-                    <Link className="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 w-full sm:w-auto">
+                    <Link className="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 w-auto">
                         Next Scope
                     </Link>
                 </div>

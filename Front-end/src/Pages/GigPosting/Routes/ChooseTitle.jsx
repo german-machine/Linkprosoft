@@ -15,9 +15,12 @@ const predefinedSkills = [
 
 export default function ChooseTitle() {
 
+    function hand() {
+        console.log('hand');
+    }
     return (
-        <div className="w-full lg:w-[75%] xl:w-[75%] min-h-screen flex flex-col items-center lg:justify-center px-4 md:px-20 py-8 lg:py-0 place-self-end relative z-[10]">
-            <div className="w-full">
+        <div className="w-full lg:w-[75%] xl:w-[75%] min-h-screen flex flex-col items-center px-4 md:px-20 lg:px-16 py-8 lg:py-10 place-self-end relative z-[10]">
+            <div className="w-full lg:w-[90% mx-auto">
                 {/* Title Section */}
                 <div className="mb-8">
                     <h1 className="text-2xl md:text-3xl font-bold mb-2">Choose a strong title.</h1>
@@ -51,7 +54,7 @@ export default function ChooseTitle() {
 
                 {/* Navigation Buttons */}
                 <div className="flex justify-between items-center mt-[5rem] ">
-                    <button className="px-4 py-2 border border-blue-500 text-blue-500 rounded hover:bg-blue-50 transition">
+                    <button onClick={hand} disabled={true} className="border border-gray-300 text-gray-700 px-4 py-2 rounded-md hover:bg-gray-100 w-auto">
                         Back
                     </button>
                     <Link to='skill-required' className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 transition">
@@ -60,7 +63,7 @@ export default function ChooseTitle() {
                 </div>
 
                 {/* Progress Bar */}
-                <div className="mt-6 flex place-content-end bg-yellow-500 min-h-full">
+                <div className="mt-6 flex place-content-end min-h-full">
                     <div className="h-1 w-full bg-gray-300 rounded">
                         <div className="h-full bg-blue-500 w-1/5 rounded"></div>
                     </div>

@@ -1,5 +1,4 @@
-import React, { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { useState } from "react";
 
 const predefinedSkills = [
     "UI/UX Design",
@@ -16,7 +15,6 @@ const predefinedSkills = [
 export default function SkillsRequired({ setIsActive }) {
     const [skills, setSkills] = useState(predefinedSkills);
     const [input, setInput] = useState("");
-    const navigate = useNavigate();
 
     const addSkill = () => {
         if (input && !skills.includes(input)) {
@@ -82,9 +80,9 @@ export default function SkillsRequired({ setIsActive }) {
                     <button  onClick={handleNavigateBack} className="border border-gray-300 text-gray-700 px-4 py-2 rounded-md hover:bg-gray-100 w-auto">
                         Back
                     </button>
-                    <Link onClick={handleNavigateForward} className="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 w-auto">
+                    <button onClick={handleNavigateForward} className="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 w-auto">
                         Next Scope
-                    </Link>
+                    </button>
                 </div>
 
                 <div className="w-full bg-gray-200 h-1 rounded mt-6">

@@ -37,6 +37,12 @@ import NotificationSidebar from './Pages/UserDashboard/Routes/NotificationSideba
 import Report from './Pages/UserDashboard/Routes/Report.jsx'
 import ProjectSidebar from './Pages/UserDashboard/Routes/ProjectSidebar.jsx'
 import Dashboard from './Pages/UserDashboard/Routes/Dashboard.jsx'
+import MessageList from './Pages/UserDashboard/Routes/MessageList.jsx'
+import ChatArea from './Pages/UserDashboard/Routes/ChatArea.jsx'
+import DashboardBody from './Pages/UserDashboard/components/DasboardBody.jsx'
+import GigPosting from './Pages/GigPosting/GigPosting.jsx'
+import ChooseTitle from './Pages/GigPosting/Routes/ChooseTitle.jsx'
+import SkillsRequired from './Pages/GigPosting/Routes/SkillsRequired.jsx'
 
 const router = createBrowserRouter([
   {
@@ -48,15 +54,20 @@ const router = createBrowserRouter([
     path: '/user-dashboard',
     element: <UserDashboard />,
     children: [
-      { index: true, element: <Dashboard /> }, // Default route
-      { path: 'dashboard', element: <Dashboard /> },
+      { index: true, element: <DashboardBody /> }, // Default route
+      {
+        path: 'dashboard', element: <DashboardBody />,
+        children: [
+          { path: 'message', element: <ChatArea /> },
+        ]
+      },
       { path: 'certifications', element: <Certifications /> },
       { path: 'post', element: <Post /> },
       { path: 'projects', element: <ProjectSidebar /> },
       { path: 'billing', element: <Billing /> },
       { path: 'notifications', element: <NotificationSidebar /> },
       { path: 'report', element: <Report /> },
-      { path: 'settings', element: <Settings /> },	
+      { path: 'settings', element: <Settings /> },
       {
         path: 'gigs-options',
         element: <GigsOptionsBody />,
@@ -86,7 +97,7 @@ const router = createBrowserRouter([
           { path: 'help', element: <Help /> },
           { path: 'customers-support', element: <CustomerSupport /> },
         ]
-      }
+      },
     ],
   },
   {
@@ -107,21 +118,29 @@ const router = createBrowserRouter([
   },
   {
     path: '/employer-signup',
-    element: <EmployerSignup/>,
+    element: <EmployerSignup />,
   },
   {
     path: '/login',
-    element: <Login/>,
+    element: <Login />,
   },
   {
     path: '/professional-login',
-    element: <ProfesionalLogin/>,
+    element: <ProfesionalLogin />,
   },
   {
     path: '/professional-signup',
-    element: <ProfessionalSignUp/>,
+    element: <ProfessionalSignUp />,
   },
-  
+  {
+    path: 'gig-posting',
+    element: <GigPosting />,
+    children: [
+      { index: true, element: <ChooseTitle /> },
+      { path: 'skill-required', element: <SkillsRequired /> },
+    ]
+  }
+
 ])
 
 createRoot(document.getElementById('root')).render(

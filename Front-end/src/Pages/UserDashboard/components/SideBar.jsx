@@ -1,22 +1,16 @@
-import React, { useEffect, useState, useRef } from 'react'
+import { useEffect, useRef } from 'react'
 import worker from '../assets/worker.svg'
 import { Link } from 'react-router-dom'
 import '../components/Scroll.css'
 import { IoIosSettings } from 'react-icons/io'
 import messageImg1 from "../assets/team-1.png";
 import messageImg2 from "../assets/team-3.png";
+import { useAuth } from '../../../contexts/User'
 
 
 const SideBar = ({ isToggled, location, isActive, setIsActive, setIsToggled }) => {
-    const [rangeValue, setRangeValue] = useState(70);
     const menuRef = useRef(null);
-
-    // useEffect(() => {
-    //     const percent = (rangeValue / 100) * 100;
-    //     const slider = document.querySelector(".styled-range");
-    //     slider.style.background = `linear-gradient(to right, #006FA3 ${percent}%, #ccc ${percent}%)`;
-    // }, [rangeValue]);
-
+    const { user } = useAuth();
 
     useEffect(() => {
         // Sync the state with the URL path on component mount
@@ -53,26 +47,10 @@ const SideBar = ({ isToggled, location, isActive, setIsActive, setIsToggled }) =
                                 <img src={worker} alt="" className='lg:w-[100%]' />
                             </div>
                             <div className='w-full'>
-                                <h2 className='font-Inter font-bold text-base lg:text-lg'>John, Doe</h2>
-                                <p className='font-Inter font-normal text-sm lg:text-base'>Service Provider</p>
+                                <h2 className='font-Inter font-bold text-base lg:text-lg'>{user?.firstName[0].toUpperCase() + user.firstName.slice(1).toLowerCase()}</h2>
+                                <p className='font-Inter font-normal text-sm lg:text-base'>{user?.userType[0].toUpperCase() + user.userType.slice(1).toLowerCase()}</p>
                             </div>
                         </div>
-                        {/* <div className='px-4 mt-4'>
-                            <Link className='underline text-xs lg:text-base font-Inter font-normal text-[#006FA3]'>Complete your profile</Link>
-                            <div className='flex gap-3 items-center'>
-                                <input
-                                    type="range"
-                                    name=""
-                                    id=""
-                                    value={rangeValue}
-                                    min="0"
-                                    max="100"
-                                    className='styled-range'
-                                    onChange={(e) => setRangeValue(e.target.value)}
-                                />
-                                <output>{rangeValue}%</output>
-                            </div>
-                        </div> */}
                     </div>
 
                     <div className='flex flex-col gap-3 flex-1'>
@@ -125,7 +103,7 @@ const SideBar = ({ isToggled, location, isActive, setIsActive, setIsToggled }) =
 
                     </div>
 
-                    {/* <h2>Help</h2> */}
+
                     <div className='w-full flex items-center justify-between lg:gap-2'>
                         <Link onClick={() => setIsToggled(!isToggled)} to="settings" className='bg-[#F6F6F6] rounded-full py-2 px-2 flex items-center justify-center shadow-lg'>
                             <IoIosSettings className='text-2xl' />

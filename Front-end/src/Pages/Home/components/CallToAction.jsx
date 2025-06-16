@@ -9,7 +9,7 @@ const CallToAction = () => {
             Find and easily hire the best professional for your project.
           </h1>
 
-          <a className="block bg-bluecolor text-white text-center font-Inter w-[60%] sm:w-[35%] lg:w-[20%] mx-auto py-[10px] px-[25px] rounded-tl-[40px] rounded-br-[40px]" href="#">
+          <a className="block bg-bluecolor text-white text-center font-Inter w-[60%] sm:w-[35%] lg:w-[25%] xl:w-[20%] mx-auto py-[10px] px-[25px] rounded-tl-[40px] rounded-br-[40px]" href="#">
             Join Linkprosoft
           </a>
         </div>

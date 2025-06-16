@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { RiMenu5Fill } from "react-icons/ri";
 import { IoCloseSharp } from "react-icons/io5";
 import { useState } from 'react';
@@ -8,6 +8,7 @@ import avatar from '../../../assets/images/avatar.png';
 
 const Navbar = () => {
   const [isToggled, setIsToggled] = useState(false);
+  const navigate = useNavigate();
   const {user} = useAuth();
 
   const handleMenu = () => {
@@ -17,8 +18,8 @@ const Navbar = () => {
   return (
     <>
       <header className="bg-white w-[100%] sticky z-[1000] top-0 left-0 right-0 shadow-md">
-        <nav className="w-[90%] lg:w-[90%] xl:w-[85%] py-4 md:py-10 lg:py-4 mx-auto flex justify-between items-center">
-          <div className="text-4xl md:text-6xl lg:text-4xl font-bold text-bluecolor font-Inter cursor-pointer">
+        <nav className="w-[90%] lg:w-[90%] xl:w-[85%] py-4 mx-auto flex justify-between items-center">
+          <div className="text-4xl font-bold text-bluecolor font-Inter cursor-pointer">
             <Link to='/'>Linkprosoft</Link>
           </div>
 
@@ -35,7 +36,7 @@ const Navbar = () => {
               <Link to="/signup-as" className="bg-bluecolor lg:hover:bg-transparent border hover:border-bluecolor text-white hover:text-bluecolor font-Inter py-[10px] px-[25px] rounded-tl-[40px] rounded-br-[40px]">Sign Up</Link>
               <Link to="/login" className="border text-white lg:text-bluecolor border-white lg:border-bluecolor lg:hover:bg-bluecolor hover:text-white font-Inter py-[10px] px-[25px] rounded-tl-[40px] rounded-br-[40px]">Login</Link>
             </div>
-            : <div>
+            : <div onClick={() => navigate('/user-dashboard/')} className='hidden lg:block'>
               <img src={avatar} alt="" />
             </div>
             }
@@ -44,7 +45,7 @@ const Navbar = () => {
 
 
           <div className='block lg:hidden' onClick={handleMenu}>
-            {isToggled ? <IoCloseSharp className="text-bluecolor text-2xl md:text-5xl" /> : <RiMenu5Fill className='text-bluecolor text-2xl md:text-5xl' />}
+            {isToggled ? <IoCloseSharp className="text-bluecolor text-2xl md:text-4xl" /> : <RiMenu5Fill className='text-bluecolor text-2xl md:text-4xl' />}
           </div>
         </nav>
       </header>

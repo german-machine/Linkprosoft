@@ -1,6 +1,3 @@
-/* eslint-disable react/prop-types */
-import React from 'react'
-import profile from '../../JobDetails/assets/images/profile.png'
 import { Link } from 'react-router-dom';
 
 const HeaderBanner = ({ bgColor, logoColor, btnColor, btnTextColor, pageHeader, pageLink }) => {
@@ -16,9 +13,6 @@ const HeaderBanner = ({ bgColor, logoColor, btnColor, btnTextColor, pageHeader, 
                         <Link to={`/${pageLink}`} className={`text-center px-6 py-2 rounded-md`} style={{ backgroundColor: btnColor }}>
                             <span className={`font-Inter font-bold text-base `} style={{ color: btnTextColor }}>{pageHeader}</span>
                         </Link>
-                        <div className='w-[15%] lg:w-[12%] hidden md:block'>
-                            <img src={profile} alt="" className='rounded-full' />
-                        </div>
                     </div>
                 </div>
             </nav>

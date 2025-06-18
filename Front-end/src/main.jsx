@@ -1,45 +1,46 @@
-import { StrictMode } from 'react'
+import { StrictMode, lazy, Suspense } from 'react';
 import { createRoot } from 'react-dom/client'
 import './index.css'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
-import Home from './Pages/Home/Home.jsx'
-import Error from './components/Error.jsx'
-import JobDetails from './Pages/JobDetails/JobDetails.jsx'
-import EmployerDashboard from './Pages/EmployerDashboard/EmployerDashboard.jsx'
-import Recommended from './Pages/UserDashboard/Routes/Recommended.jsx'
-import SavedGigs from './Pages/UserDashboard/Routes/SavedGigs.jsx'
-import Notifications from './Pages/UserDashboard/Routes/Notifications.jsx'
-import Pending from './Pages/UserDashboard/Routes/Pending.jsx'
-import Completed from './Pages/UserDashboard/Routes/Completed.jsx'
-import Rejected from './Pages/UserDashboard/Routes/Rejected.jsx'
-import Onboarding from './Pages/OnBoarding/Onboarding.jsx'
-import SignUpAs from './Pages/Login&SignUp/SignUpAs.jsx'
-import Login from './Pages/Login&SignUp/EmployerLogin.jsx'
-import EmployerSignup from './Pages/Login&SignUp/EmployerSignUp.jsx'
-import ProfesionalLogin from './Pages/Login&SignUp/ProfesionalLogin.jsx'
-import ProfessionalSignUp from './Pages/Login&SignUp/ProfessionalSignUp.jsx'
-import GigsOptionsBody from './Pages/UserDashboard/components/GigsOptionsBody.jsx'
-import Settings from './Pages/UserDashboard/Routes/Settings.jsx'
-import Help from './Pages/UserDashboard/Routes/Help.jsx'
-import CustomerSupport from './Pages/UserDashboard/Routes/CustomerSupport.jsx'
-import SettingsBody from './Pages/UserDashboard/components/SettingsBody.jsx'
-import PasswordReset from './Pages/UserDashboard/Routes/PasswordReset.jsx'
+import UserProvider from './contexts/User';
+import Loader from './components/Loader.jsx';
+import { LoadingProvider } from './contexts/LoadingContext.jsx';
+import ProtectedRoute from './components/ProtectedRoute.jsx';
 
-// user-dashboard routes
-import UserDashboard from './Pages/UserDashboard/UserDashboard.jsx'
-import EditProfile from './Pages/UserDashboard/Routes/EditProfile.jsx'
-import Certifications from './Pages/UserDashboard/Routes/Certifications.jsx'
-import Post from './Pages/UserDashboard/Routes/Post.jsx'
-import Projects from './Pages/UserDashboard/Routes/Projects.jsx'
-import ProjectsBody from './Pages/UserDashboard/components/ProjectsBody.jsx'
-import Billing from './Pages/UserDashboard/Routes/Billing.jsx'
-import NotificationSidebar from './Pages/UserDashboard/Routes/NotificationSidebar.jsx'
-import Report from './Pages/UserDashboard/Routes/Report.jsx'
-import ProjectSidebar from './Pages/UserDashboard/Routes/ProjectSidebar.jsx'
-import ChatArea from './Pages/UserDashboard/Routes/ChatArea.jsx'
-import DashboardBody from './Pages/UserDashboard/components/DasboardBody.jsx'
-import GigPosting from './Pages/GigPosting/GigPosting.jsx'
-import ChooseTitle from './Pages/GigPosting/Routes/ChooseTitle.jsx'
+const Home = lazy(() => import('./Pages/Home/Home.jsx'))
+const Error = lazy(() => import('./components/Error.jsx'))
+const JobDetails = lazy(() => import('./Pages/JobDetails/JobDetails.jsx'))
+const EmployerDashboard = lazy(() => import('./Pages/EmployerDashboard/EmployerDashboard.jsx'))
+const Recommended = lazy(() => import('./Pages/UserDashboard/Routes/Recommended.jsx'))
+const SavedGigs = lazy(() => import('./Pages/UserDashboard/Routes/SavedGigs.jsx'))
+const Notifications = lazy(() => import('./Pages/UserDashboard/Routes/Notifications.jsx'))
+const Pending = lazy(() => import('./Pages/UserDashboard/Routes/Pending.jsx'))
+const Completed = lazy(() => import('./Pages/UserDashboard/Routes/Completed.jsx'))
+const Rejected = lazy(() => import('./Pages/UserDashboard/Routes/Rejected.jsx'))
+const Onboarding = lazy(() => import('./Pages/OnBoarding/Onboarding.jsx'))
+const SignUpAs = lazy(() => import('./Pages/Login&SignUp/SignUpAs.jsx'))
+const Login = lazy(() => import('./Pages/Login&SignUp/Login.jsx'))
+const SignUp = lazy(() => import('./Pages/Login&SignUp/SignUp.jsx'))
+const GigsOptionsBody = lazy(() => import('./Pages/UserDashboard/components/GigsOptionsBody.jsx'))
+const Settings = lazy(() => import('./Pages/UserDashboard/Routes/Settings.jsx'))
+const Help = lazy(() => import('./Pages/UserDashboard/Routes/Help.jsx'))
+const CustomerSupport = lazy(() => import('./Pages/UserDashboard/Routes/CustomerSupport.jsx'))
+const SettingsBody = lazy(() => import('./Pages/UserDashboard/components/SettingsBody.jsx'))
+const PasswordReset = lazy(() => import('./Pages/UserDashboard/Routes/PasswordReset.jsx'))
+const UserDashboard = lazy(() => import('./Pages/UserDashboard/UserDashboard.jsx'))
+const EditProfile = lazy(() => import('./Pages/UserDashboard/Routes/EditProfile.jsx'))
+const Certifications = lazy(() => import('./Pages/UserDashboard/Routes/Certifications.jsx'))
+const Post = lazy(() => import('./Pages/UserDashboard/Routes/Post.jsx'))
+const Projects = lazy(() => import('./Pages/UserDashboard/Routes/Projects.jsx'))
+const ProjectsBody = lazy(() => import('./Pages/UserDashboard/components/ProjectsBody.jsx'))
+const Billing = lazy(() => import('./Pages/UserDashboard/Routes/Billing.jsx'))
+const NotificationSidebar = lazy(() => import('./Pages/UserDashboard/Routes/NotificationSidebar.jsx'))
+const Report = lazy(() => import('./Pages/UserDashboard/Routes/Report.jsx'))
+const ProjectSidebar = lazy(() => import('./Pages/UserDashboard/Routes/ProjectSidebar.jsx'))
+const ChatArea = lazy(() => import('./Pages/UserDashboard/Routes/ChatArea.jsx'))
+const DashboardBody = lazy(() => import('./Pages/UserDashboard/components/DasboardBody.jsx'))
+const GigPosting = lazy(() => import('./Pages/GigPosting/GigPosting.jsx'))
+const ChooseTitle = lazy(() => import('./Pages/GigPosting/Routes/ChooseTitle.jsx'))
 
 const router = createBrowserRouter([
   {
@@ -49,14 +50,15 @@ const router = createBrowserRouter([
   },
   {
     path: '/user-dashboard',
-    element: <UserDashboard />,
+    element: <ProtectedRoute> <UserDashboard /> </ProtectedRoute>,
     children: [
-      { index: true, element: <DashboardBody /> }, // Default route
+      { index: true, element: <DashboardBody /> },
       {
-        path: 'dashboard', element: <DashboardBody />,
+        path: 'dashboard',
+        element: <DashboardBody />,
         children: [
           { path: 'message', element: <ChatArea /> },
-        ]
+        ],
       },
       { path: 'certifications', element: <Certifications /> },
       { path: 'post', element: <Post /> },
@@ -69,7 +71,7 @@ const router = createBrowserRouter([
         path: 'gigs-options',
         element: <GigsOptionsBody />,
         children: [
-          { index: true, element: <Recommended /> }, // Default route for GigsOptions
+          { index: true, element: <Recommended /> },
           { path: 'recommended', element: <Recommended /> },
           { path: 'saved-gigs', element: <SavedGigs /> },
           { path: 'notifications', element: <Notifications /> },
@@ -79,7 +81,7 @@ const router = createBrowserRouter([
         path: 'projects',
         element: <ProjectsBody />,
         children: [
-          { index: true, element: <Pending /> }, // Default route for Projects
+          { index: true, element: <Pending /> },
           { path: 'pending', element: <Pending /> },
           { path: 'completed', element: <Completed /> },
           { path: 'rejected', element: <Rejected /> },
@@ -93,54 +95,38 @@ const router = createBrowserRouter([
           { path: 'password-reset', element: <PasswordReset /> },
           { path: 'help', element: <Help /> },
           { path: 'customers-support', element: <CustomerSupport /> },
-        ]
+        ],
       },
     ],
   },
+  { path: '/employer-dashboard', element: <ProtectedRoute> <EmployerDashboard /> </ProtectedRoute> },
+
+  { path: '/job-details', element: <JobDetails /> },
+
+  { path: '/on-boarding', element: <Onboarding /> },
+
+  { path: '/signup-as', element: <SignUpAs /> },
+
+  { path: '/register', element: <SignUp /> },
+
+  { path: '/login', element: <Login /> },
+
   {
-    path: '/employer-dashboard/*',
-    element: <EmployerDashboard />,
-  },
-  {
-    path: '/job-details',
-    element: <JobDetails />,
-  },
-  {
-    path: '/on-boarding',
-    element: <Onboarding />,
-  },
-  {
-    path: '/signup-as',
-    element: <SignUpAs />,
-  },
-  {
-    path: '/employer-signup',
-    element: <EmployerSignup />,
-  },
-  {
-    path: '/login',
-    element: <Login />,
-  },
-  {
-    path: '/professional-login',
-    element: <ProfesionalLogin />,
-  },
-  {
-    path: '/professional-signup',
-    element: <ProfessionalSignUp />,
-  },
-  {
-    path: 'gig-posting',
-    element: <GigPosting />,
+    path: 'gig-posting', element: <GigPosting />,
     children: [
       { index: true, element: <ChooseTitle /> },
-    ]
-  }
-
-])
+    ],
+  },
+]);
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <RouterProvider router={router} />
+    <LoadingProvider>
+      <UserProvider>
+        <Suspense fallback={<Loader />}>
+          <RouterProvider router={router} />
+        </Suspense>
+      </UserProvider>
+    </LoadingProvider>
   </StrictMode>
-)
+);

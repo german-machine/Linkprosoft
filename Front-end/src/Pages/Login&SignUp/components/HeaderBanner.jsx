@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 
 const HeaderBanner = ({ bgColor, logoColor, btnColor, btnTextColor, pageHeader, pageLink }) => {
     return (
-        <header className={`w-full border-b-[3px] sticky top-0`} style={{ backgroundColor: bgColor, border: btnColor }} >
+        <header className={`w-full border-b-[3px] sticky top-0 z-[9999]`} style={{ backgroundColor: bgColor, border: btnColor }} >
             <nav className="w-full">
                 <div className="w-[90%] mx-auto py-4 lg:py-3 flex items-center justify-between">
                     <div className={`text-3xl md:text-4xl lg:text-4xl font-bold font-Inter cursor-pointer`} style={{ color: logoColor}}>

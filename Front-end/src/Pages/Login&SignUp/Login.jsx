@@ -125,10 +125,10 @@ const Login = () => {
               </div>
 
               <div className="flex items-center justify-center gap-3 mt-4">
-                <div className="bg-white shadow-xl drop-shadow-xl w-max rounded-full px-2 py-2 ">
+                <div className="bg-white shadow-xl drop-shadow-xl w-max rounded-full px-2 py-2 cursor-pointer">
                   <FaLinkedin className='text-2xl text-bluecolor' />
                 </div>
-                <div className="bg-white shadow-xl drop-shadow-xl w-max rounded-full px-2 py-2 ">
+                <div className="bg-white shadow-xl drop-shadow-xl w-max rounded-full px-2 py-2 cursor-pointer">
                   <FcGoogle className='text-2xl' />
                 </div>
               </div>

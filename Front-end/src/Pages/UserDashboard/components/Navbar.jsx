@@ -3,10 +3,15 @@ import profile from '../assets/profile.svg'
 import { IoMdSearch } from 'react-icons/io'
 import { RiMenu5Fill } from 'react-icons/ri'
 import { useAuth } from '../../../contexts/User'
+import axios from 'axios';
 
 const Navbar = ({ handleMenu }) => {
   const { user } = useAuth();
   const navigate = useNavigate();
+
+  const handleLogout = () => {
+    alert('functionality coming soon...');
+  }
 
   return (
     <>
@@ -25,7 +30,7 @@ const Navbar = ({ handleMenu }) => {
 
           <div className='w-[40%] mx-auto hidden lg:flex items-center justify-end'>
             <div className='lg:w-full xl:w-[90%] mx-auto px-[8%] flex gap-[4%] items-center justify-end'>
-              <Link href="/" className='block bg-[#006FA3] font-Inter text-white text-sm rounded-md py-2 px-6'>Sign Out</Link>
+              <button onClick={handleLogout} href="/" className='block bg-[#006FA3] font-Inter text-white text-sm rounded-md py-2 px-6'>Sign Out</button>
             </div>
             <div onClick={() => navigate('/user-dashboard')} className='w-[10%] mx-auto flex rounded-ful align-center justify-center'>
               <img src={profile} alt="" className='rounded-full' />

@@ -4,13 +4,16 @@ import cookieParser from 'cookie-parser'
 import { configDotenv } from 'dotenv'
 import { connectDB } from './db/connectDB.js'
 import authRoutes from "./route/auth/auth-routes.js"
+import serverless from "serverless-http";
 
+
+await connectDB();
 
 const app = express()
 configDotenv()
 const PORT = process.env.PORT
 app.use(cors({
-    origin: [""],
+    origin: ['http://localhost:5173', 'https://linkprosoft-beta.vercel.app'],
     methods: ["GET", "POST", "DELETE", "PUT"],
     allowedHeaders: [
         "Content-Type",
@@ -21,8 +24,9 @@ app.use(cors({
     ],
     credentials: true
 }))
-app.use(cookieParser())
+app.options('*', cors());
 app.use(express.json())
+app.use(cookieParser())
 app.use("/api/auth", authRoutes)
 
 
@@ -30,7 +34,5 @@ app.use("/api/auth", authRoutes)
 
 
 
-app.listen(PORT, () => {
-    connectDB()
-    console.log(`server started on http://localhost:${PORT}`);
-})
+// Export handler for Vercel
+export const handler = serverless(app);

@@ -17,7 +17,7 @@ const UserProvider = ({ children }) => {
     useEffect(() => {
         const fetchUser = async () => {
             try {
-                const res = await axios.get("linkprosoft-backend.vercel.app/api/auth/check-auth", {
+                const res = await axios.get(`${import.meta.env.VITE_API_BASE_URL}/api/auth/check-auth`, {
                     withCredentials: true, // needed for cookie-based auth
                 });
 
@@ -42,7 +42,7 @@ const UserProvider = ({ children }) => {
     // signup functionality
     const signup = async (formData) => {
         try {
-            const res = await axios.post('linkprosoft-backend.vercel.app/api/auth/register', formData, {
+            const res = await axios.post(`${import.meta.env.VITE_API_BASE_URL}/api/auth/register`, formData, {
                 withCredentials: true,
             });
             const { token, user } = res.data
@@ -66,7 +66,7 @@ const UserProvider = ({ children }) => {
     //login functionality
     const login = async (formData) => {
         try {
-            const res = await axios.post('linkprosoft-backend.vercel.app/api/auth/login', formData);
+            const res = await axios.post(`${import.meta.env.VITE_API_BASE_URL}/api/auth/login`, formData);
             const { token, user } = res.data
 
             localStorage.setItem("token", token);
@@ -93,7 +93,7 @@ const UserProvider = ({ children }) => {
     //logout functionality
     const logout = async () => {
         try {
-            const res = await axios.post('linkprosoft-backend.vercel.app/api/auth/logout', {}, {
+            const res = await axios.post(`${import.meta.env.VITE_API_BASE_URL}/api/auth/logout`, {}, {
                 withCredentials: true,
             });
             console.log(res);

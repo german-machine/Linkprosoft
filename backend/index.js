@@ -10,7 +10,7 @@ const app = express()
 configDotenv()
 const PORT = process.env.PORT
 app.use(cors({
-    origin: ["http://linkprosoft-beta.vercel.app"],
+    origin: [""],
     methods: ["GET", "POST", "DELETE", "PUT"],
     allowedHeaders: [
         "Content-Type",
